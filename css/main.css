@@ -11,23 +11,25 @@
 }
 
 html, body { height: 100%; }
-
+html{border-top:10px solid #aaa;}
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
+  /*font: 13.34px Helvetica, Arial, sans-serif;*/
+  font: 14px 'Poly', georgia, serif;
   text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
-
+h1{
+	font-size:24px;
+}
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
+a         { color: #aaa;text-decoration:none; }
 a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a:visited { color: #aaa; }
 
 /*****************************************************************************/
 /*
@@ -42,7 +44,10 @@ ul.posts {
 ul.posts li {
   line-height: 1.75em;
 }
-
+.pdate{
+	font-size: .9em;
+	line-height: 1.8em;
+}
 ul.posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
@@ -58,8 +63,8 @@ ul.posts span {
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
+  width: 45em;
+  margin: 0em auto 2em;
   line-height: 1.5em;
 }
 
@@ -70,11 +75,11 @@ ul.posts span {
 
 .site .header h1.title {
   display: inline-block;
-  margin-bottom: 2em;
+  margin:1.5em .5em 1.5em .5em;
 }
 
 .site .header h1.title a {
-  color: #a00;
+  color: #ffffff;/*#a00;*/
 }
 
 .site .header h1.title a:hover {
@@ -82,7 +87,7 @@ ul.posts span {
 }
 
 .site .header a.extra {
-  color: #aaa;
+  color: #fff;/*#aaa;*/
   margin-left: 1em;
 }
 
@@ -120,7 +125,23 @@ ul.posts span {
 .site .footer .rss img {
   border: 0;
 }
-
+.header{
+	background-color:#da0;/*#9d8143;*/
+	margin-bottom:15px;
+	/*position:fixed;*/
+	width:45em;
+	overflow:hidden;
+}
+.home{
+	position:relative;
+}
+.nav{
+	float:right;
+	margin-top:4.3em;
+}
+.nav a{
+	padding:.7em .3em .7em .3em;
+}
 /*****************************************************************************/
 /*
 /* Posts
@@ -158,3 +179,9 @@ ul.posts span {
 .post pre.terminal code {
   background-color: #333;
 }
+.ptitle{
+	border-bottom: 3px dotted #ddd;
+	padding-bottom: 2px;
+	width:100%;
+}
+
