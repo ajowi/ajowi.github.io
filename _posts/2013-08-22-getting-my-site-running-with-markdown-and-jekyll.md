@@ -25,21 +25,21 @@ I signed in to my GitHub account and created my repo at <span class="bdr">ajowi/
 
 Then cloned the repo
 
-```    
+{% highlight bash %}    
 git clone https://github.com/ajowi/ajowi.github.io.git
-```    
+{% endhighlight %}   
 
 Checked my Ruby version
 
-```
+{% highlight bash %}
 ruby -v
-```
+{% endhighlight %} 
 
 The installed Ruby version on my local machine is <span class="bdr">ruby 1.8.7</span>. <span class="bdr">github-pages</span> needs version 1.9.3. I  achieve this by installing [Ruby Version Manager(RVM)](http://rvm.io) - "a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems."
 
-```
+{% highlight bash %}
 \curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
-```
+{% endhighlight %} 
 
 My default shell is <span class="bdr">zsh</span> and for <span class="bdr">rvm</span> to work perfectly ok I need to edit my <span class="bdr">~/.zshrc</span> file by appending the following line
 
@@ -48,32 +48,32 @@ My default shell is <span class="bdr">zsh</span> and for <span class="bdr">rvm</
 
 Followed by a restart of my shell program for the changes to take effect. Then enable <span class="bdr">ruby 1.9.3</span>.
 
-```
+{% highlight bash %}
 rvm list
 rvm use ruby-1.9.3-p448 --default
 ruby -v
-```
+{% endhighlight %} 
 
 I now have <span class="bdr">ruby 1.9.3</span> as my default ruby version. 
 
 Installing <span class="bdr">github-pages</span> will also install Jekyll and other required gems like rdiscount, liquid, pygments...
 
-```
+{% highlight bash %}
 sudo gem install github-pages
 gem list --local
-```
+{% endhighlight %} 
 
 The last line above verifies all gems are installed. 
 
 Everything seems to be in order. I now create my new Jekyll powered site and fire up the Jekyll local server to see the generated pages.
 
-```
+{% highlight bash %}
 cd ajowi.github.io
 jekyll new site
 cp site/* .
 rm -rf site
 jekyll serve -w
-```
+{% endhighlight %} 
 
 This results in the error:***Cannot convert***
 
