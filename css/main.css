@@ -11,7 +11,7 @@
 }
 
 html, body { height: 100%; }
-html{border-top:10px solid #aaa;}
+html{}
 body {
   background-color: #FFF;
   /*font: 13.34px Helvetica, Arial, sans-serif;*/
@@ -27,9 +27,9 @@ h1{
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #aaa;text-decoration:none; }
+a         { color: #da0;text-decoration:none; }
 a:hover   { color: #000; }
-a:visited { color: #aaa; }
+a:visited { color: #da0; }
 
 /*****************************************************************************/
 /*
@@ -47,12 +47,13 @@ ul.posts li {
 .pdate{
 	font-size: .9em;
 	line-height: 1.8em;
+        font-family: Monaco, "Courier New", monospace;
 }
 ul.posts span {
-  color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
+
 
 /*****************************************************************************/
 /*
@@ -66,6 +67,7 @@ ul.posts span {
   width: 45em;
   margin: 0em auto 2em;
   line-height: 1.5em;
+  border-top:10px solid #aaa
 }
 
 .site .header a {
@@ -183,5 +185,17 @@ ul.posts span {
 	border-bottom: 3px dotted #ddd;
 	padding-bottom: 2px;
 	width:100%;
+	color:#aaa;
+	font-family: Monaco, "Courier New", monospace;
+	font-size:80%;
 }
-
+.ptitle a{
+    color:#aaa;
+}
+.ptitle a:hover{
+    color:#000;
+}
+.bdr{
+border:1px solid #da0;
+padding:2px 1px;
+}
