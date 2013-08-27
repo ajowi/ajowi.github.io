@@ -5,7 +5,7 @@ date:   2013-08-22 10:45:14
 categories: jekyll markdown
 ---
 
-I finally managed to get this site up and running, thanks to this tool -> [Jekyll](http://jekyllrb.com/). What Jekyll does is transform your plain text files into static web pages -- it is a static site generator written by +mojombo.
+I finally managed to get this site up and running, thanks to this tool -> [Jekyll](http://jekyllrb.com/). What Jekyll does is transform your plain text files into static web pages -- it is a static site generator written by @mojombo.
 
 This being my first post I am going to write about my experience setting up this website. First, I wanted to have a website that could easily be managed using version control. So anytime am pushing my files to the server the website gets updated instantly. I have heard about GitHub Pages before. I ultimately made a decision to host this site on [github](http://github.com) using [GitHub Pages](http://pages.github.com) - and what's more, it is free of charge. Yes, I love "Free" -- where I come from "Free" means "Freedom".
 
@@ -18,4 +18,16 @@ I required:-
 1. a github account
 2. ruby 1.9.3 - since I will be using github-pages
 3. github-pages gem - this installs Jekyll and other requires gems
+
+I already had a GitHub account. There are two types of pages available with GitHub Pages ( read more under [Pages](https://help.github.com/articles/user-organization-and-project-pages)). I will be creating a User Page. 
+
+In accordance with GitHub's naming scheme all User pages must exist in a directory named username/username.gihub.io. I logged in to my GitHub account and created my repo at ajowi/ajowi.github.io.
+
+Then cloned my repo
+
+```bash
+git clone https://github.com/ajowi/ajowi.github.io.git
+cd ajowi.github.io.git
+```
+
 
