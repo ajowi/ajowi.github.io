@@ -65,7 +65,7 @@ gem list --local
 
 The last line above verifies all gems are installed. 
 
-Everything seems to be in order. I now create my new Jekyll powered site and fire up the Jekyll local server to see the generated pages.
+Everything seems to be in order. I can now create my new Jekyll powered site and fire up the Jekyll local server to see the generated pages.
 
 {% highlight bash %}
 cd ajowi.github.io
@@ -75,7 +75,11 @@ rm -rf site
 jekyll serve -w
 {% endhighlight %} 
 
-This results in the error:***Cannot convert***
+This results in the error:
+
+***Conversion error: There was an error converting '_posts/2013-08-22-getting-my-site-running-with-markdown-and-jekyll.md'***
+
+***error: MaRuKu encountered problem(s) while converting your markup.. Use --trace to view backtrace***
 
 Editing <span class="bdr">_config.yml</span> file and replacing <span class="bdr">markdown:maruku</span> with <span class="bdr">markdown:rdiscount</span> as the Markdown engine solved the problem.
 
