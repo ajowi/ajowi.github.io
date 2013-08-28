@@ -83,6 +83,6 @@ This results in the error:
 
 Editing <span class="bdr">_config.yml</span> file and replacing <span class="bdr">markdown:maruku</span> with <span class="bdr">markdown:rdiscount</span> as the Markdown engine solved the problem.
 
-By pointing my browser to <span class="bdr">http:localhost:4000</span>. I am now able to see my new website -- just like that!
+By pointing my browser to <span class="bdr">http:localhost:4000</span>. I am now able to see Jekyll in action -- my new website, just like that!
 
 It is really easy and fun setting up a webpage with Jekyll (such an awesome tool) - truly gets you running in seconds. And the GitHub integration is just the killer. I can now have all my web content in text files beautifully formated in Markdown/Textile and hosted on GitHub.  I publish my work locally, push changes to GitHub and there you go! My website is up to date.
