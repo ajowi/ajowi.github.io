@@ -1,3 +1,4 @@
 name: David Ajowi
 markdown: rdiscount
 pygments: true
+permalink: /posts/:title.html
