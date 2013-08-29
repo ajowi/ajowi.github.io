@@ -156,9 +156,16 @@ ul.posts span {
 /* standard */
 .post pre {
   background-color: #f8f8f8;
-  border: 1px solid #ddd;
+  border: 1px solid #da0;
   padding: 0 .4em;
   width:inherit;
+  overflow: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 .post ul, .post ol {
@@ -167,7 +174,7 @@ ul.posts span {
 
 .post code {
   background-color: transparent;
-  border: 1px solid #ddd;
+  border: 1px solid #da0;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: 12px;
   color:#333;
