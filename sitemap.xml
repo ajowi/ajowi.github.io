@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>
+            http://davidajowi.com/posts/getting-my-site-running-with-markdown-and-jekyll.html
+        </loc>
+        <lastmod>2013-08-29T13:51:26+03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://davidajowi.com/</loc>
+        <lastmod>2013-08-29T13:51:26+03:00</lastmod>
+    </url>
+</urlset>
