@@ -75,7 +75,7 @@ rm -rf site
 jekyll serve -w
 {% endhighlight %} 
 
-This results in the error:
+Something went wrong!
 
 ***Conversion error: There was an error converting '_posts/2013-08-22-getting-my-site-running-with-markdown-and-jekyll.md'***
 
