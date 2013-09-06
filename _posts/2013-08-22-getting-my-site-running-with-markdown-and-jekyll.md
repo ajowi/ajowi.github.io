@@ -81,7 +81,7 @@ Something went wrong!
 
 ***error: MaRuKu encountered problem(s) while converting your markup.. Use --trace to view backtrace***
 
-Editing <span class="bdr">_config.yml</span> file and replacing <span class="bdr">markdown:maruku</span> with <span class="bdr">markdown:rdiscount</span> as the Markdown engine solved the problem.
+Editing <span class="bdr">_config.yml</span> file and replacing <span class="bdr">markdown:maruku</span> with <span class="bdr">markdown:rdiscount</span> as the Markdown engine solved the problem. I didn't bother to find out why maruku failed, just wanted to see things work. I will update this post when I get time.
 
 By pointing my browser to <span class="bdr">http:localhost:4000</span>. I am now able to see Jekyll in action -- my new website, just like that!
 
