@@ -56,7 +56,7 @@ ruby -v
 
 I now have <span class="bdr">ruby 1.9.3</span> as my default ruby version. 
 
-Installing <span class="bdr">github-pages</span> will also install Jekyll and other required gems like rdiscount, liquid, pygments...
+Installing <span class="bdr">github-pages</span> will also install Jekyll and other required gems like <span class="bdr">rdiscount</span>, <span class="bdr">liquid</span>, <span class="bdr">pygments</span> and others...
 
 {% highlight bash %}
 sudo gem install github-pages
