@@ -17,9 +17,9 @@ A pulsating square of green, red, and black is located at the coordinates of Nai
 
 A pink line, pointing from CERN to the west, is the definition of the z-axis, along which LHC is colliding the proton beams inside of the CMS detector.
 
-For detailed explanation of the animation and the physics behind it see the project's GitHub page at (SHD Nairobi LHC Data Hack)[https://github.com/ajowi/shdnbi_lhcdatahack]
+For detailed explanation of the animation and the physics behind it see the project's GitHub page at [SHD Nairobi LHC Data Hack](https://github.com/ajowi/shdnbi_lhcdatahack)
 
-Hats off to all the (winning hacks)[http://www.sciencehackday.or.ke/post/2012/apr/18/winning-hacks/] SHD Nairobi 2012.
+Hats off to all the [winning hacks](http://www.sciencehackday.or.ke/post/2012/apr/18/winning-hacks/) SHD Nairobi 2012.
 
 
 **SHD Nairobi 2013**
@@ -40,6 +40,7 @@ We wrote the extracted set of sentences to seperate files. Once this was done we
 
 Armed with [SciKit Learn](http://scikit-learn.org/stable/) and [NumPy](http://www.numpy.org/) and the above training data, we were ready start the standard machine learning procedure. Our algorithm of choice was the Decision Trees(DT) for supervised learning. This would help us create a model that predict the value of a target variable by learning simple decision rules. These rules are inferred from the training data features. For example, with our data were able to tell that a sentence is Swahili or English based on the letter occurances in that particular sentence. DTs have their share od advantages and disadvatages -- find our more at the [SciKit Learn DTs](http://scikit-learn.org/stable/modules/tree.html) page.
 
+![Machine Learning in Action](http://davidajowi.com/images/ml.png)
 
 Credits: [@matt_bellis](https://twitter.com/matt_bellis), [@chiteri](), [Morris Mwanga](http://nerd.co.ke/morris),[@FOnuonga](), Jessica Muenkel 
 
