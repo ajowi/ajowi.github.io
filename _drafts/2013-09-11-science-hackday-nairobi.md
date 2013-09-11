@@ -2,7 +2,7 @@ I have participated in the Science Hack Day(SHD) events for the second year now.
 
 It all started in April, 2012 when the first Science Hack Day came to Nairobi - the "Green City in the Sun". I was very excited as everyone I talked to was. In fact, the motto of SHD is to "Get excited and make things happen with science". The organizers had set up a wiki where participants are encouraged to post their hack ideas before the big day. For a list of SHD Nairobi 2012 hacks ideas visit [SHD Nairobi Wiki](http://shdnairobi.pbworks.com/w/page/52729796/nairobihacks2012). 
 
-![/images/chiteri_muons_flight_path.jpg]
+![Mouns Flight Path Presentation by @chiteri](http://davidajowi.com/images/chiteri_muons_flight_path.jpg)
 
 One of the organizers, having participated in SHD San Fransisco, hinted at the availability of Large Hadron Collider(LHC) datasets from the Compact Muon Solenoid(CMS) experiments. This would form the basis of our hack at the first SHD Nairobi event. A team of three, we obtained the datasets to create the Mouns Flight Path.
 
