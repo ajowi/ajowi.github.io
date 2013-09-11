@@ -56,7 +56,7 @@ ruby -v
 
 I now have <span class="bdr">ruby 1.9.3</span> as my default ruby version. 
 
-Installing <span class="bdr">github-pages</span> will also install Jekyll and other required gems like rdiscount, liquid, pygments...
+Installing <span class="bdr">github-pages</span> will also install Jekyll and other required gems like <span class="bdr">rdiscount</span>, <span class="bdr">liquid</span>, <span class="bdr">pygments</span> and others...
 
 {% highlight bash %}
 sudo gem install github-pages
@@ -75,14 +75,14 @@ rm -rf site
 jekyll serve -w
 {% endhighlight %} 
 
-This results in the error:
+Something went wrong!
 
 ***Conversion error: There was an error converting '_posts/2013-08-22-getting-my-site-running-with-markdown-and-jekyll.md'***
 
 ***error: MaRuKu encountered problem(s) while converting your markup.. Use --trace to view backtrace***
 
-Editing <span class="bdr">_config.yml</span> file and replacing <span class="bdr">markdown:maruku</span> with <span class="bdr">markdown:rdiscount</span> as the Markdown engine solved the problem.
+Editing <span class="bdr">_config.yml</span> file and replacing <span class="bdr">markdown:maruku</span> with <span class="bdr">markdown:rdiscount</span> as the Markdown engine solved the problem. I didn't bother to find out why maruku failed, just wanted to see things work. I will update this post when time allows.
 
-By pointing my browser to <span class="bdr">http:localhost:4000</span>. I am now able to see Jekyll in action -- my new website, just like that!
+Pointing my browser at <span class="bdr">http:localhost:4000</span>,  Jekyll in action -- my new website, just like that!
 
 It is really easy and fun setting up a webpage with Jekyll (such an awesome tool) - truly gets you running in seconds. And the GitHub integration is just the killer. I can now have all my web content in text files beautifully formated in Markdown/Textile and hosted on GitHub.  I publish my work locally, push changes to GitHub and there you go! My website is up to date.
