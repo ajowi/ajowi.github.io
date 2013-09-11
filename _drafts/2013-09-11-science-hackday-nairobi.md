@@ -40,7 +40,14 @@ We wrote the extracted set of sentences to seperate files. Once this was done we
 
 Armed with [SciKit Learn](http://scikit-learn.org/stable/) and [NumPy](http://www.numpy.org/) and the above training data, we were ready start the standard machine learning procedure. Our algorithm of choice was the Decision Trees(DT) for supervised learning. This would help us create a model that predict the value of a target variable by learning simple decision rules. These rules are inferred from the training data features. For example, with our data were able to tell that a sentence is Swahili or English based on the letter occurances in that particular sentence. DTs have their share od advantages and disadvatages -- find our more at the [SciKit Learn DTs](http://scikit-learn.org/stable/modules/tree.html) page.
 
+Upon training we generated the below graph by plotting the letter occurrances in the different sets of our Swahili and English training datasets.
+
+
 ![Machine Learning in Action](http://davidajowi.com/images/ml.png)
+
+
+In an upcoming post I will take you through the plots and explain the behaviour of the LHC dataset this training was intended for.
+
 
 Credits: [@matt_bellis](https://twitter.com/matt_bellis), [@chiteri](), [Morris Mwanga](http://nerd.co.ke/morris),[@FOnuonga](), Jessica Muenkel 
 
