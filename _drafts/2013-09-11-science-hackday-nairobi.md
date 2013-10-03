@@ -1,10 +1,12 @@
-I have participated in the Science Hack Day(SHD) events for the second year now. It is usually a great opportunity to create new exciting things in just 48 hours of hacking. To learn more about Science Hack Day and how it started visit [Science Hack Day Home](http://sciencehackday.org).
+I have participated in the Science Hack Day(SHD) events for the second year now. It is a great opportunity to learn and create new exciting things in just under 36 hours of hacking. To learn more about Science Hack Day and how it started look at the [Science Hack Day Page](http://sciencehackday.org).
 
-It all started in April, 2012 when the first Science Hack Day came to Nairobi - the "Green City in the Sun". I was very excited as everyone I talked to was. In fact, the motto of SHD is to "Get excited and make things happen with science". The organizers had set up a wiki where participants are encouraged to post their hack ideas before the big day. For a list of SHD Nairobi 2012 hacks ideas visit [SHD Nairobi Wiki](http://shdnairobi.pbworks.com/w/page/52729796/nairobihacks2012). 
+It all started in April, 2012 when the first SHD event came to Nairobi - the "Green City in the Sun". I was very excited as every science enthusiast would. The organizers had set up a [Wiki](http://shdnairobi.pbworks.com/w/page/52729796/nairobihacks2012) where participants are encouraged to post their hack ideas before the big day. There you can find a list of all SHD Nairobi hacks ideas. 
+
+Muons Flight Path in action...
 
 ![Mouns Flight Path Presentation by @chiteri](http://davidajowi.com/images/chiteri_muons_flight_path.jpg)
 
-One of the organizers, having participated in SHD San Fransisco, hinted at the availability of Large Hadron Collider(LHC) datasets from the Compact Muon Solenoid(CMS) experiments. This would form the basis of our hack at the first SHD Nairobi event. A team of three, we obtained the datasets to create the Mouns Flight Path.
+One of the organizers, having participated in a previous SHD event, told of the availability of Large Hadron Collider(LHC) datasets from the Compact Muon Solenoid(CMS) experiments. This would form the basis of our hack at the first SHD Nairobi event. A team of three, we obtained the datasets to create the Mouns Flight Path.
 
 Muons Flight Paths is an animated representation of the journey elementary particles would go if they were to travel un-interrupted from the Physics labs at CERN. This happens after an extremely high-energy proton-proton collision at near the speeds of light inside the LHC. See the animation in action below.
 
