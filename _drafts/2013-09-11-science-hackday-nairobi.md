@@ -37,7 +37,7 @@ Using Python programming language we output the extracted set of sentences to se
 0.115789 0.170213 0.056738 0.127660 0.049645 0.042553 0.212121
 {%endhighlight%}
 
-With [SciKit Learn](http://scikit-learn.org/stable/), [NumPy](http://www.numpy.org/) and related tools and the above training data, off we started our machine learning process. We chose Decision Trees(DT) for supervised learning as our algorithm for training. This would help us create a model that predict the value of a target variable by learning simple decision rules. These rules are inferred from the training data features. For example, with our data were able to tell that a sentence is Swahili or English based on the letter occurances in that particular sentence. DTs have their share od advantages and disadvatages -- find our more at the [SciKit Learn DTs](http://scikit-learn.org/stable/modules/tree.html) page.
+With [SciKit Learn](http://scikit-learn.org/stable/), [NumPy](http://www.numpy.org/) and related tools and the above training data, off we started our machine learning process. We chose Decision Trees(DT) for supervised learning as our algorithm for training. This would help us create a model that predict the value of a target variable by learning simple decision rules. These rules are inferred from the training data features. For example, with our data were able to tell that a sentence is Swahili or English based on the letter occurances in that particular sentence. DTs have their share of advantages and disadvatages -- find our more at the [SciKit Learn DTs](http://scikit-learn.org/stable/modules/tree.html) page.
 
 Upon training we generated the below graph by plotting the letter occurrances in the different sets of our Swahili and English training datasets.
 
@@ -45,7 +45,7 @@ Upon training we generated the below graph by plotting the letter occurrances in
 ![Machine Learning in Action](http://davidajowi.com/images/ml.png)
 
 
-I am still palying around with this data and hopefully in a future post I will take you through the plots and explain the behaviour of the LHC dataset.
+I am still palying around with this data and code and hopefully in a future post I will get an opportunity explain the plots and behaviour of the LHC dataset.
 
 
 A list of tools used in this project and source code can be found at [SHD Nairobi 2013 Machine Learning](https://github.com/ajowi/shdnbi2013_machinelearning) page on GitHub.
@@ -53,4 +53,4 @@ A list of tools used in this project and source code can be found at [SHD Nairob
 
 **SHD Nairobi 2014**
 
-Am already psyched up for SHD Nairobi 2014. As always looking forward to learning new ways of doing things and making new friends. There are already ideas coming through on what topics we should hack on. But, that is a subject for a future post.
+Am already psyched up for SHD Nairobi 2014. As always looking forward to learning new ways of doing things and making new friends. See you at SHD Nairobi 2014.
