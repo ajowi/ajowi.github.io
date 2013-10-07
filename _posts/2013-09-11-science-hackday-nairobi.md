@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Science Hack Day Nairobi"
-date:   2013-08-22 10:45:14
-categories: jekyll markdown
+date:   2013-09-11 10:45:14
+categories: python machinelearning science physics lhc 
 ---
 
 I have participated in the Science Hack Day(SHD) events for the second year now. It is a great opportunity to learn and create new exciting things in just under 48 hours of hacking. To learn more about Science Hack Day and how it started see the [Science Hack Day Page](http://sciencehackday.org).
