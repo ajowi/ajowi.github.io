@@ -1,4 +1,4 @@
-I have participated in the Science Hack Day(SHD) events for the second year now. It is a great opportunity to learn and create new exciting things in just under 36 hours of hacking. To learn more about Science Hack Day and how it started look at the [Science Hack Day Page](http://sciencehackday.org).
+I have participated in the Science Hack Day(SHD) events for the second year now. It is a great opportunity to learn and create new exciting things in just under 36 hours of hacking. To learn more about Science Hack Day and how it started see the [Science Hack Day Page](http://sciencehackday.org).
 
 It all started in April, 2012 when the first SHD event came to Nairobi - the "Green City in the Sun". I was very excited as every science enthusiast would. The organizers had set up a [Wiki](http://shdnairobi.pbworks.com/w/page/52729796/nairobihacks2012) where participants are encouraged to post their hack ideas before the big day. There, you can find a list of all SHD Nairobi hacks ideas. 
 
