@@ -13,18 +13,17 @@ Muons Flight Paths is an animated representation of the journey elementary parti
 
 **The Animation**
 
-
+![Mouns Flight Path Animation](http://davidajowi.com/images/muons1.png)
 
 For detailed explanation of the animation and the physics behind it see the project's GitHub page at [SHD Nairobi LHC Data Hack](https://github.com/ajowi/shdnbi_lhcdatahack)
 
-Hats off to all the [winning hacks](http://www.sciencehackday.or.ke/post/2012/apr/18/winning-hacks/) SHD Nairobi 2012.
 
 
 **SHD Nairobi 2013**
 
 In June, 2013., came the second SHD with a whole lot of new experiences. The number of participants in this edition more than doubled -- an indication of just how SHD gets people involved in creating new exciting things. See (list of hacks)[] for SHD Nairobi 2013.
 
-Again, during this event I worked on the  Machine Learning (ML) for Physics hack - a project based on ideas of Machine Learning (M.L). The group had to train computers to accurately recognize sentences in either Swahili or English out of reading entries from Wikipedia in both languages. Similar rules and techniques were applied afterwards to detect the presence of particular sub-atomic particles inside Physics data collected from the Compact Muon Solenoid (C.M.S) experiment at CERN.
+During this event I had the privilege to work on the  Machine Learning (ML) for Physics hack - a project based on ideas of Machine Learning (M.L). The group had to train computers to accurately recognize sentences in either Swahili or English out of reading entries from Wikipedia in both languages. Similar rules and techniques were applied afterwards to detect the presence of particular sub-atomic particles inside Physics data collected from the Compact Muon Solenoid (C.M.S) experiment at CERN.
 
 The first task was to extract sentences from the Swahili and English Wikipedia articles dump. Latest dumps for the [Swahili Wiki](http://dumps.wikimedia.org/swwiki) and [English Wiki](http://dumps.wikimedia.org/enwiki) can be downloaded online. This [WikiExtractor](http://alas.matf.bg.ac.rs/~mr04069/WikiExtractor.py) script was useful in extracting the topics/sentences from the wiki dumps. 
 
