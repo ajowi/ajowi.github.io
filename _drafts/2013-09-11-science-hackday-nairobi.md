@@ -8,13 +8,15 @@ Muons Flight Path in action...
 
 We were very happy at the availability of Large Hadron Collider(LHC) datasets from the Compact Muon Solenoid(CMS) experiments. Even though most of us had little knowledge of the structure of this data. This would form the basis of our hack at the first SHD Nairobi event. A team of three, we obtained the datasets to create the Mouns Flight Path.
 
-Muons Flight Paths is an animated representation of the journey elementary particles would go if they were to travel un-interrupted from the Physics labs at CERN. This happens after an extremely high-energy proton-proton collision at near the speeds of light inside the LHC. See the animation in this [youtube video](https://www.youtube.com/watch?v=ag7w0vgZj5g)(am still struggling to embed a video on GitHub Pages).
+Muons Flight Paths is an animated representation of the journey elementary particles would go if they were to travel un-interrupted from the Physics labs at CERN. This happens after an extremely high-energy proton-proton collision at near the speeds of light inside the LHC.
 
 
 **The Animation**
 
 ![Mouns Flight Path Animation](http://davidajowi.com/images/muons1.png)
 
+See the full animation in this [YouTube video](https://www.youtube.com/watch?v=ag7w0vgZj5g)(am still struggling to embed a video on GitHub Pages)
+ 
 For detailed explanation of the animation and the physics behind it see the project's GitHub page at [SHD Nairobi LHC Data Hack](https://github.com/ajowi/shdnbi_lhcdatahack)
 
 
@@ -25,9 +27,9 @@ In June, 2013., came the second SHD with a whole lot of new experiences. The num
 
 During this event I had the privilege to work on the  Machine Learning (ML) for Physics hack - a project based on ideas of Machine Learning (M.L). The group had to train computers to accurately recognize sentences in either Swahili or English out of reading entries from Wikipedia in both languages. Similar rules and techniques were applied afterwards to detect the presence of particular sub-atomic particles inside Physics data collected from the Compact Muon Solenoid (C.M.S) experiment at CERN.
 
-The first task was to extract sentences from the Swahili and English Wikipedia articles dump. Latest dumps for the [Swahili Wiki](http://dumps.wikimedia.org/swwiki) and [English Wiki](http://dumps.wikimedia.org/enwiki) can be downloaded online. This [WikiExtractor](http://alas.matf.bg.ac.rs/~mr04069/WikiExtractor.py) script was useful in extracting the topics/sentences from the wiki dumps. 
+We extracted sentences from the Swahili and English Wikipedia articles dump. Latest dumps for the [Swahili Wiki](http://dumps.wikimedia.org/swwiki) and [English Wiki](http://dumps.wikimedia.org/enwiki) can be downloaded online. This [WikiExtractor](http://alas.matf.bg.ac.rs/~mr04069/WikiExtractor.py) script was useful in extracting the topics/sentences from the wiki dumps. 
 
-We wrote the extracted set of sentences to seperate files. Once this was done we wrote a python scipt to count number of occurances a partucular letter say 'u' appeared in both the sets of Swahili and English sentences. We then calculated the fraction of the number of times the letter appeared in each sentence and wrote the results to a file, as columns. This would be our training data.
+Using Python programming language we output the extracted set of sentences to seperate text files. Then a python scipt to count number of occurances a partucular letter say 'u' appeared in both the sets of Swahili and English sentences. We then calculated the fraction of the number of times the letter appeared in each sentence and wrote the results to a file, as columns. This would be our training data.
 
 {%highlight ruby%}
 0.131868 0.087912 0.098901 0.076923 0.065934 0.153061 0.091837
@@ -43,12 +45,10 @@ Upon training we generated the below graph by plotting the letter occurrances in
 ![Machine Learning in Action](http://davidajowi.com/images/ml.png)
 
 
-In an upcoming post I will take you through the plots and explain the behaviour of the LHC dataset this training was intended for.
+I am still palying around with this data and hopefully in a future post I will take you through the plots and explain the behaviour of the LHC dataset.
 
 
-Credits: [@matt_bellis](https://twitter.com/matt_bellis), [@chiteri](), [Morris Mwanga](http://nerd.co.ke/morris),[@FOnuonga](), Jessica Muenkel 
-
-A list of tools used and source code can be found at [SHD Nairobi 2013 Machine Learning](https://github.com/ajowi/shdnbi2013_machinelearning) page on GitHub.
+A list of tools used in this project and source code can be found at [SHD Nairobi 2013 Machine Learning](https://github.com/ajowi/shdnbi2013_machinelearning) page on GitHub.
 
 
 **SHD Nairobi 2014**
