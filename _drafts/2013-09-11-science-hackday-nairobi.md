@@ -8,16 +8,12 @@ Muons Flight Path in action...
 
 We were very happy at the availability of Large Hadron Collider(LHC) datasets from the Compact Muon Solenoid(CMS) experiments. Even though most of us had little knowledge of the structure of this data. This would form the basis of our hack at the first SHD Nairobi event. A team of three, we obtained the datasets to create the Mouns Flight Path.
 
-Muons Flight Paths is an animated representation of the journey elementary particles would go if they were to travel un-interrupted from the Physics labs at CERN. This happens after an extremely high-energy proton-proton collision at near the speeds of light inside the LHC. See the animation in action below.
+Muons Flight Paths is an animated representation of the journey elementary particles would go if they were to travel un-interrupted from the Physics labs at CERN. This happens after an extremely high-energy proton-proton collision at near the speeds of light inside the LHC. See the animation in this [youtube video](https://www.youtube.com/watch?v=ag7w0vgZj5g)(am still struggling to embed a video on GitHub Pages).
 
 
 **The Animation**
 
-A small red dot represents the coordinates of CERN, which straddles the borders of France and Switzerland. 
 
-A pulsating square of green, red, and black is located at the coordinates of Nairobi, Kenya, the location for this Science Hack Day. 
-
-A pink line, pointing from CERN to the west, is the definition of the z-axis, along which LHC is colliding the proton beams inside of the CMS detector.
 
 For detailed explanation of the animation and the physics behind it see the project's GitHub page at [SHD Nairobi LHC Data Hack](https://github.com/ajowi/shdnbi_lhcdatahack)
 
