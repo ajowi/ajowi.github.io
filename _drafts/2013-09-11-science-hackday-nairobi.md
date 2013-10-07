@@ -23,11 +23,11 @@ For detailed explanation of the animation and the physics behind it see the proj
 
 **SHD Nairobi 2013**
 
-In June, 2013., came the second SHD with a whole lot of new experiences. The number of participants in this edition more than doubled -- an indication of just how SHD gets people involved in creating new exciting things. See (list of hacks)[] for SHD Nairobi 2013.
+In June, 2013., came the second SHD with a whole lot of new experiences. The number of participants in this edition more than doubled. See (list of hacks)[] for SHD Nairobi 2013.
 
 During this event I had the privilege to work on the  Machine Learning (ML) for Physics hack - a project based on ideas of Machine Learning (M.L). The group had to train computers to accurately recognize sentences in either Swahili or English out of reading entries from Wikipedia in both languages. Similar rules and techniques were applied afterwards to detect the presence of particular sub-atomic particles inside Physics data collected from the Compact Muon Solenoid (C.M.S) experiment at CERN.
 
-We extracted sentences from the Swahili and English Wikipedia articles dump. Latest dumps for the [Swahili Wiki](http://dumps.wikimedia.org/swwiki) and [English Wiki](http://dumps.wikimedia.org/enwiki) can be downloaded online. This [WikiExtractor](http://alas.matf.bg.ac.rs/~mr04069/WikiExtractor.py) script was useful in extracting the topics/sentences from the wiki dumps. 
+We extracted sentences from the Swahili and English Wikipedia articles dump. Latest dumps for the [Swahili Wiki](http://dumps.wikimedia.org/swwiki) and [English Wiki](http://dumps.wikimedia.org/enwiki) can be downloaded online. This cool [WikiExtractor](http://alas.matf.bg.ac.rs/~mr04069/WikiExtractor.py) script gave an idea of extracting the topics/sentences from the wiki dumps. 
 
 Using Python programming language we output the extracted set of sentences to seperate text files. Then a python scipt to count number of occurances a partucular letter say 'u' appeared in both the sets of Swahili and English sentences. We then calculated the fraction of the number of times the letter appeared in each sentence and wrote the results to a file, as columns. This would be our training data.
 
@@ -37,7 +37,7 @@ Using Python programming language we output the extracted set of sentences to se
 0.115789 0.170213 0.056738 0.127660 0.049645 0.042553 0.212121
 {%endhighlight%}
 
-Armed with [SciKit Learn](http://scikit-learn.org/stable/) and [NumPy](http://www.numpy.org/) and the above training data, we were ready start the standard machine learning procedure. Our algorithm of choice was the Decision Trees(DT) for supervised learning. This would help us create a model that predict the value of a target variable by learning simple decision rules. These rules are inferred from the training data features. For example, with our data were able to tell that a sentence is Swahili or English based on the letter occurances in that particular sentence. DTs have their share od advantages and disadvatages -- find our more at the [SciKit Learn DTs](http://scikit-learn.org/stable/modules/tree.html) page.
+With [SciKit Learn](http://scikit-learn.org/stable/), [NumPy](http://www.numpy.org/) and related tools and the above training data, off we started our machine learning process. We chose Decision Trees(DT) for supervised learning as our algorithm for training. This would help us create a model that predict the value of a target variable by learning simple decision rules. These rules are inferred from the training data features. For example, with our data were able to tell that a sentence is Swahili or English based on the letter occurances in that particular sentence. DTs have their share od advantages and disadvatages -- find our more at the [SciKit Learn DTs](http://scikit-learn.org/stable/modules/tree.html) page.
 
 Upon training we generated the below graph by plotting the letter occurrances in the different sets of our Swahili and English training datasets.
 
