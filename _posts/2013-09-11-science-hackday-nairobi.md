@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting My Site Running With Markdown + Jekyll!"
+title:  "Science Hack Day Nairobi"
 date:   2013-08-22 10:45:14
 categories: jekyll markdown
 ---
