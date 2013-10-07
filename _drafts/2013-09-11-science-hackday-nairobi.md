@@ -6,7 +6,7 @@ Muons Flight Path in action...
 
 ![Mouns Flight Path Presentation by @chiteri](http://davidajowi.com/images/chiteri_muons_flight_path.jpg)
 
-We were very happy at the availability of Large Hadron Collider(LHC) datasets from the Compact Muon Solenoid(CMS) experiments (many thanks to [@mattbellis](https://twitter.com/mattbellis)). Even though most of us had little knowledge of the structure of this data. This would form the basis of our hack at the first SHD Nairobi event. A team of three, we obtained the datasets to create the Mouns Flight Path.
+We were very happy at the availability of Large Hadron Collider(LHC) datasets from the Compact Muon Solenoid(CMS) experiments (many thanks to [@matt_bellis](https://twitter.com/mattbellis)). Even though most of us had little knowledge of the structure of this data. This would form the basis of our hack at the first SHD Nairobi event. A team of three, we obtained the datasets to create the Mouns Flight Path.
 
 Muons Flight Paths is an animated representation of the journey elementary particles would go if they were to travel un-interrupted from the Physics labs at CERN. This happens after an extremely high-energy proton-proton collision at near the speeds of light inside the LHC.
 
