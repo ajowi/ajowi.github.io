@@ -2,6 +2,7 @@
 layout: post
 title:  "Science Hack Day Nairobi"
 date:   2013-09-11 10:45:14
+comments: true
 categories: python machinelearning science physics lhc 
 ---
 
