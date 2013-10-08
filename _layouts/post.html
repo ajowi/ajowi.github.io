@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1><span class="ptitle">{{ page.title }}</span></h1>
+<h1 id="post-title"><span class="ptitle">{{ page.title }}</span></h1>
 
 <span class="pdate">{{ page.date | date_to_string }}</span>
 
@@ -10,6 +10,8 @@ layout: default
 {{ content }}
 
 {% if page.comments %}
+<h2 class="cheader">Leave A Comment</h2>
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

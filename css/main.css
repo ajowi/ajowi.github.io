@@ -24,7 +24,7 @@ h1{
 	font-size:24px;
 }
 h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
+p { margin: 1em 0;color:#333; }
 
 a         { color: #da0;text-decoration:none; }
 a:hover   { color: #000; }
@@ -52,9 +52,20 @@ ul.posts li {
 	line-height: 1.8em;
         font-family: Monaco, "Courier New", monospace;
 }
+.ptitle a{
+    color:#333;
+}
+#home h1, #post-title{
+	border-bottom: 3px dotted #ddd;
+	padding-bottom: 2px;
+	width:717px;
+	color:#333;
+	font-family: Monaco, "Courier New", monospace;
+	font-size:28px;
+}
 ul.posts span {
   font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+  /*font-size: 80%;*/
 }
 
 
@@ -132,7 +143,7 @@ ul.posts span {
 }
 .header{
 	background-color:#da0;/*#9d8143;*/
-	margin-bottom:15px;
+	margin-bottom:35px;
 	/*position:fixed;*/
 	width:45em;
 	overflow:hidden;
@@ -195,17 +206,7 @@ ul.posts span {
 .post pre.terminal code {
   background-color: #333;
 }
-.ptitle{
-	border-bottom: 3px dotted #ddd;
-	padding-bottom: 2px;
-	width:100%;
-	color:#aaa;
-	font-family: Monaco, "Courier New", monospace;
-	font-size:24px;
-}
-.ptitle a{
-    color:#aaa;
-}
+
 .ptitle a:hover{
     color:#000;
 }
@@ -215,4 +216,15 @@ padding:2px 1px;
 color:#001;
 font-family: Monaco, "Courier New", monospace;
 font-size: font-size: .7em;
+}
+.posts li{
+page-break-after:always;
+border-bottom:1px solid #eed;
+margin-bottom:20px;
+}
+h2.cheader{
+margin-bottom:20px;
+margin-top:20px;
+border-bottom:4px solid #eed;
+color:#3f4549;
 }
