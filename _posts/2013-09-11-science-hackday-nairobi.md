@@ -23,9 +23,9 @@ Muons Flight Paths is an animated representation of the journey elementary parti
 
 ![Mouns Flight Path Animation](http://davidajowi.com/images/muons1.png)
 
-See the full animation in this [YouTube video](https://www.youtube.com/watch?v=ag7w0vgZj5g) (am still struggling to embed a video on GitHub Pages)
+See the full animation in this [YouTube video](https://www.youtube.com/watch?v=ag7w0vgZj5g).
  
-For detailed explanation of the animation and the physics behind it see the project's GitHub page at [SHD Nairobi LHC Data Hack](https://github.com/ajowi/shdnbi_lhcdatahack)
+For detailed explanation of the animation and the physics behind it see the project's GitHub page -- [SHD Nairobi LHC Data Hack](https://github.com/ajowi/shdnbi_lhcdatahack)
 
 
 
