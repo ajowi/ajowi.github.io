@@ -33,7 +33,7 @@ For detailed explanation of the animation and the physics behind it see the proj
 
 In June, 2013., came the second SHD with a whole lot of new experiences. See a (list of hacks)[] from SHD Nairobi 2013.
 
-During this event I had the privilege to work on the  Machine Learning (ML) for Physics hack - a project based on ideas of Machine Learning (M.L). We had to train computers to accurately recognize sentences in either Swahili or English out of reading entries from Wikipedia in both languages. Similar rules and techniques were applied afterwards to detect the presence of particular sub-atomic particles inside Physics data collected from the Compact Muon Solenoid (C.M.S) experiment at CERN.
+On this occassion I had the privilege to work on the  Machine Learning (ML) for Physics hack - a project based on ideas of Machine Learning (M.L). We had to train computers to accurately recognize sentences in either Swahili or English out of reading entries from Wikipedia in both languages. Similar rules and techniques were applied afterwards to detect the presence of particular sub-atomic particles inside Physics data collected from the Compact Muon Solenoid (C.M.S) experiment at CERN.
 
 We extracted sentences from the Swahili and English Wikipedia articles dump. Latest dumps for the [Swahili Wiki](http://dumps.wikimedia.org/swwiki) and [English Wiki](http://dumps.wikimedia.org/enwiki) can be downloaded online. This cool [WikiExtractor](http://alas.matf.bg.ac.rs/~mr04069/WikiExtractor.py) script can be handy when you want to extract topics/sentences from the wiki dumps. 
 
