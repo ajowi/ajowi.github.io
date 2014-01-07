@@ -1,4 +1,4 @@
-name: David Ajowi
+name: davidajowi.com
 markdown: rdiscount
 pygments: true
 permalink: /posts/:title.html
