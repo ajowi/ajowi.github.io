@@ -99,7 +99,7 @@ ul.posts span {
 }
 
 .site .header h1.title a:hover {
-  color: #000;
+  color: #ffffff;
 }
 
 .site .header a.extra {
@@ -142,11 +142,13 @@ ul.posts span {
   border: 0;
 }
 .header{
-	background-color:#da0;/*#9d8143;*/
+	/*background-color:#da0;/*#9d8143;*/
 	margin-bottom:35px;
 	/*position:fixed;*/
 	width:45em;
 	overflow:hidden;
+	height:146px;
+	background-image:url('../images/top.jpg');
 }
 .home{
 	position:relative;
