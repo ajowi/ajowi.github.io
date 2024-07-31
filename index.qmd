@@ -1,5 +1,5 @@
 ---
-title: "David Ajowi's Blog"
+title: "Latest Entries"
 listing:
   contents: posts
   sort: "date desc"

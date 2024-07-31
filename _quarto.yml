@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "ajowi-blog"
+  title: "David Ajowi's Blog"
   navbar:
     right:
       - about.qmd
