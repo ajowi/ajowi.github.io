@@ -1,5 +1,6 @@
 ---
 title: "Welcome To My Blog"
+subtitle: "This is my first post"
 author: "Tristan O'Malley"
 date: "2024-07-28"
 categories: [news]
