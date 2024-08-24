@@ -150,10 +150,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Deep Learning Development: Setting up FastAI on MacOS</h1>
-            <p class="subtitle lead">In this guide I share my experience setting up fastai on MacOS and show you how to get started quickly.</p>
+            <p class="subtitle lead">In this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly.</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">deep learning</div>
                 <div class="quarto-category">fastai</div>
+                <div class="quarto-category">guides</div>
               </div>
                   </div>
   </div>
@@ -190,20 +191,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>My deep learning journey accelerated when my friend and a former comrade (thank you, Martin Chiteri) pointed me to the famous <em>Practical Deep Learning for Coders</em> course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book <em>Deep Learning for Coders with fastai and PyTorch</em>(also freely available online).</p>
-<p>fastai is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see <a href="##Resources">Resources</a> for links to important materials.</p>
-<p>In the following sections, I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started with development quickly.</p>
+<p>My deep learning journey accelerated when my friend and a former comrade (thank you, Martin Chiteri) pointed me to the famous <em>Practical Deep Learning for Coders</em> course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book <em>Deep Learning for Coders with fastai and PyTorch</em> (also freely available online).</p>
+<p><code>fastai</code> is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see <a href="##Resources">Resources</a> section for links to important material.</p>
+<p>In this guide, I share my experience setting up <code>fastai</code> on MacOS (with Apple silicon) and show you how to get started with development quickly.</p>
 <blockquote class="blockquote">
-<p>You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported).</p>
+<p>You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). - fastai docs</p>
 </blockquote>
-<p>Installation of fastai on MacOS is not supported as evidenced by the above statement from the fastai docs website. The good news, we can use fastai without installation by using <a href="https://colab.google">Google Colab</a> or <a href="https://kaggle.com">Kaggle</a>.</p>
-<p>Often, I want to be able to work on projects locally. A good option is to use docker containers (see <a href="##Resources">Resources</a> for official docker containers for the project). And so I opted to setup a container enviroment for my scenario.</p>
+<p>Installation of <code>fastai</code> on MacOS is not supported. The good news, you can use <code>fastai</code> without installing it in your local machine - this is possible on <a href="https://colab.google">Google Colab</a> or <a href="https://kaggle.com">Kaggle</a> platforms.</p>
+<p>Often, I want to be able to work on projects locally. A good option is to use docker containers. I opted to setup a container enviroment.</p>
 <section id="setting-up-a-docker-container" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-a-docker-container">Setting up a docker container</h2>
 <blockquote class="blockquote">
 <p>Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.</p>
 </blockquote>
-<p>Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the <strong>Applications</strong> folder. Beginning version 4.3.0 Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).</p>
+<p>Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the <strong>Applications</strong> folder. Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> wget https://desktop.docker.com/mac/main/arm64/Docker.dmg</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> softwareupdate <span class="at">--install-rosetta</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo hdiutil attach Docker.dmg</span>
@@ -235,28 +236,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install pytorch torchvision torchaudio cpuonly <span class="at">-c</span> pytorch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Finally, install fastai.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install <span class="at">-c</span> fastai fastai</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>I saved the docker container configuration and setup to a new image <em>fast_dl</em> using docker’s <code>commit</code> command below. <code>ps</code> lists all containers, I then copied the ID (replace CONTAINER_ID with this) of my container <em>fastai-deep-learning</em> (this is the container we created above). Then confirmed my newly created image exists using <code>docker images</code>.</p>
+</section>
+<section id="create-a-new-docker-image" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-docker-image">Create a new docker image</h2>
+<p><code>docker ps -a</code> lists all containers. I located my container (<em>fastai-deep-learning</em> created <a href="##Setting-Up-A-Docker-Container">above</a>) and copied the container ID. Saved the container’s configuration and setup to a new image <em>fastai-dl</em> using docker’s <code>container commit</code>. I finally confirmed my newly created image exists using <code>docker images</code>.</p>
+<p><em>fastai-dl</em> image can be used for spinning a new ready-to-use container for fastai development on MacOS.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker ps <span class="at">-a</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker container commit <span class="at">-p</span> CONTAINER_ID fastai-dl</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker images</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="using-jupyterlab-on-our-docker-container" class="level2">
-<h2 class="anchored" data-anchor-id="using-jupyterlab-on-our-docker-container">Using JupyterLab on our docker container</h2>
+<section id="start-developing---using-jupyterlab-inside-a-docker-container" class="level2">
+<h2 class="anchored" data-anchor-id="start-developing---using-jupyterlab-inside-a-docker-container">Start developing - Using JupyterLab inside a docker container</h2>
 <blockquote class="blockquote">
 <p>JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.</p>
 </blockquote>
-<p>I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by jupyter. To achieve this: spin up a new docker container (replace CONTAINER_NAME below), attaching the local project folder (<code>-v ~/Dev/deep-learning:/data</code> in my scenario) as a volume to the container, and mapping jupyter ports (<code>-p 8889:8888</code> in my sceario) to allow access to the container’s jupyter instance. Local directory <code>~/Dev/deep-learning</code> will be synced to <code>/data</code> folder on the container while Local port <code>8889</code> will be mapped to the container’s jupyter port <code>8888</code>.</p>
+<p>I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by Jupyter.</p>
+<p>To achieve this, I launched a new docker container (with an interactive shell) attaching my local project folder as a volume using <code>-v ~/Dev/deep-learning:/data</code> (local folder <code>~/Dev/deep-learning</code> syncs to <code>/data</code> folder in the container). I mapped ports using <code>-p 8889:8888</code> (local port <code>8889</code> maps to the container’s jupyter instance running on port <code>8888</code>).</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker run <span class="at">-it</span> <span class="at">-p</span> 8889:8888 <span class="at">-v</span> ~/Dev/deep-learning:/data <span class="at">--name</span> CONTAINER_NAME fastai-dl /bin/bash</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The command above launches a container with an interactive shell. Launch jupyter using the following command.</p>
+<p>Once inside the container I launched jupyter using the following command:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> jupyter notebook <span class="at">--ip</span> 0.0.0.0 <span class="at">--no-browser</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Voila! Jupyter can now be accessed locally at <code>https://localhost:8889</code>.</p>
+<p>Voila! I could access jupyter locally at <code>https://localhost:8889</code>.</p>
 <p><img src="jupyter.png" class="img-fluid"></p>
-<p>Now, go build your deep learning models. Happy building!</p>
+<p>You can <a href="https://hub.docker.com/r/daajowi/fastai-dl">access and download a ready-to-use image</a> to kickstart your fastai development on MacOS, or setup a clean environment by following this guide. Happy building!</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ol type="1">
-<li><a href="">Docker image ready for use in MacOS</a></li>
+<li><a href="https://hub.docker.com/r/daajowi/fastai-dl">fastai Docker Image for MacOS</a></li>
 <li><a href="https://course.fast.ai">Course: Practical Deep Learning for Coders</a></li>
 <li><a href="https://course.fast.ai">Book: Deep Learning for Coders with fastai and PyTorch</a></li>
 <li><a href="https://docs.fast.ai">fastai Docs</a></li>
