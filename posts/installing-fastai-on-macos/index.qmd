@@ -1,0 +1,135 @@
+---
+title: "Deep Learning Development: Setting up FastAI on MacOS"
+subtitle: "In this guide I share my experience setting up fastai on MacOS and show you how to get started quickly."
+author: "David Ajowi"
+date: "2024-07-28"
+categories: [deep learning, fastai]
+---
+
+My deep learning journey accelerated when my friend and a former comrade (thank you, Martin Chiteri) pointed me to the famous *Practical Deep Learning for Coders* course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book *Deep Learning for Coders with fastai and PyTorch*(also freely available online).
+
+fastai is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see [Resources](##Resources) for links to important materials.
+
+In the following sections, I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started with development quickly.
+
+> You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). 
+
+Installation of fastai on MacOS is not supported as evidenced by the above statement from the fastai docs website. The good news, we can use fastai without installation by using [Google Colab](https://colab.google) or [Kaggle](https://kaggle.com). 
+
+Often, I want to be able to work on projects locally. A good option is to use docker containers (see [Resources](##Resources) for official docker containers for the project). And so I opted to setup a container enviroment for my scenario.
+
+## Setting up a docker container
+
+> Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
+
+Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the **Applications** folder. Beginning version 4.3.0 Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).
+
+```zsh
+% wget https://desktop.docker.com/mac/main/arm64/Docker.dmg
+% softwareupdate --install-rosetta
+% sudo hdiutil attach Docker.dmg
+% sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --accept-license --user=<username>
+% sudo hdiutil detach /Volumes/Docker
+```
+
+Next, grab the latest ubuntu image from Docker Hub.
+
+```zsh
+% docker pull ubuntu
+```
+
+Create and start a new container in interactive mode. Replace *fastai-deep-learning* with your choice of container name.
+
+```zsh
+% sudo docker run -it —name fastai-deep-learning ubuntu /bin/bash
+```
+
+Update apt and install necessary packages
+
+```zsh
+% apt update && apt install wget unzip apt-utils
+```
+
+The ubuntu ARM64 (M1) base image we downloaded and used above (unless you specify a different --platform in your build call if you decide to build a fresh image) does not come pre-populated with x86 shared objects. I had to install these and link them appropriately. Otherwise, I kept encountering this error message : ``qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory``.
+
+```zsh
+% apt install -y libc6-amd64-cross libstdc++6-amd64-cross
+% ln -s /usr/x86_64-linux-gnu/lib/*.so.* /lib
+% ln -s /usr/x86_64-linux-gnu/lib64/ /lib64
+```
+
+Update apt and install necessary packages.
+
+```zsh
+% apt update && apt install wget unzip apt-utils
+```
+
+## Install fastai
+
+First, download and install `miniconda`.
+
+```zsh
+% mkdir -p ~/miniconda3
+% wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+% bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+% rm -rf ~/miniconda3/miniconda.sh
+```
+
+Install `pip`.
+
+```zsh
+% sudo apt install python3-pip
+```
+
+Install `pytorch`.
+
+```zsh
+% conda install pytorch torchvision torchaudio cpuonly -c pytorch
+```
+
+Finally, install fastai.
+
+```zsh
+% conda install -c fastai fastai
+```
+
+I saved the docker container configuration and setup to a new image *fast_dl* using docker's `commit` command below. `ps` lists all containers, I then copied the ID (replace CONTAINER_ID with this) of my container *fastai-deep-learning* (this is the container we created above). Then confirmed my newly created image exists using `docker images`.
+
+```zsh
+% docker ps -a
+% docker container commit -p CONTAINER_ID fastai-dl
+% docker images
+```
+
+## Using JupyterLab on our docker container
+
+>JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.
+
+I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by jupyter. To achieve this: spin up a new docker container (replace CONTAINER_NAME below), attaching the local project folder (`-v ~/Dev/deep-learning:/data` in my scenario) as a volume to the container, and mapping jupyter ports (`-p 8889:8888` in my sceario) to allow access to the container's jupyter instance. Local directory `~/Dev/deep-learning` will be synced to `/data` folder on the container while Local port `8889` will be mapped to the container's jupyter port `8888`.
+
+```zsh
+% docker run -it -p 8889:8888 -v ~/Dev/deep-learning:/data --name CONTAINER_NAME fastai-dl /bin/bash
+```
+
+The command above launches a container with an interactive shell. Launch jupyter using the following command.
+
+```zsh
+% jupyter notebook --ip 0.0.0.0 --no-browser
+```
+
+Voila! Jupyter can now be accessed locally at `https://localhost:8889`.
+
+
+![](jupyter.png)
+
+
+Now, go build your deep learning models. Happy building!
+
+## Resources
+1. [Docker image ready for use in MacOS]()
+2. [Course: Practical Deep Learning for Coders](https://course.fast.ai)
+3. [Book: Deep Learning for Coders with fastai and PyTorch](https://course.fast.ai)
+4. [fastai Docs](https://docs.fast.ai)
+5. [Docker Docs](https://docs.docker.com/manuals)
+6. [Jupyter Lab Docs](https://jupyter.org)
+7. [PyTorch Website](https://pytorch.org)
