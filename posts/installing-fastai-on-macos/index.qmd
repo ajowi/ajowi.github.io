@@ -1,28 +1,28 @@
 ---
 title: "Deep Learning Development: Setting up FastAI on MacOS"
-subtitle: "In this guide I share my experience setting up fastai on MacOS and show you how to get started quickly."
+subtitle: "In this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly."
 author: "David Ajowi"
 date: "2024-07-28"
-categories: [deep learning, fastai]
+categories: [deep learning, fastai, guides]
 ---
 
-My deep learning journey accelerated when my friend and a former comrade (thank you, Martin Chiteri) pointed me to the famous *Practical Deep Learning for Coders* course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book *Deep Learning for Coders with fastai and PyTorch*(also freely available online).
+My deep learning journey accelerated when my friend and a former comrade (thank you, Martin Chiteri) pointed me to the famous *Practical Deep Learning for Coders* course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book *Deep Learning for Coders with fastai and PyTorch* (also freely available online).
 
-fastai is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see [Resources](##Resources) for links to important materials.
+```fastai``` is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see [Resources](##Resources) section for links to important material.
 
-In the following sections, I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started with development quickly.
+In this guide, I share my experience setting up ```fastai``` on MacOS (with Apple silicon) and show you how to get started with development quickly.
 
-> You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). 
+> You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). - fastai docs
 
-Installation of fastai on MacOS is not supported as evidenced by the above statement from the fastai docs website. The good news, we can use fastai without installation by using [Google Colab](https://colab.google) or [Kaggle](https://kaggle.com). 
+Installation of ```fastai``` on MacOS is not supported. The good news, you can use ```fastai``` without installing it in your local machine - this is possible on [Google Colab](https://colab.google) or [Kaggle](https://kaggle.com) platforms. 
 
-Often, I want to be able to work on projects locally. A good option is to use docker containers (see [Resources](##Resources) for official docker containers for the project). And so I opted to setup a container enviroment for my scenario.
+Often, I want to be able to work on projects locally. A good option is to use docker containers. I opted to setup a container enviroment.
 
 ## Setting up a docker container
 
 > Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
 
-Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the **Applications** folder. Beginning version 4.3.0 Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).
+Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the **Applications** folder. Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).
 
 ```zsh
 % wget https://desktop.docker.com/mac/main/arm64/Docker.dmg
@@ -93,7 +93,11 @@ Finally, install fastai.
 % conda install -c fastai fastai
 ```
 
-I saved the docker container configuration and setup to a new image *fast_dl* using docker's `commit` command below. `ps` lists all containers, I then copied the ID (replace CONTAINER_ID with this) of my container *fastai-deep-learning* (this is the container we created above). Then confirmed my newly created image exists using `docker images`.
+## Create a new docker image
+
+`docker ps -a` lists all containers. I located my container (*fastai-deep-learning* created [above](##Setting-Up-A-Docker-Container)) and copied the container ID. Saved the container's configuration and setup to a new image *fastai-dl* using docker's `container commit`. I finally confirmed my newly created image exists using `docker images`. 
+
+*fastai-dl* image can be used for spinning a new ready-to-use container for fastai development on MacOS.
 
 ```zsh
 % docker ps -a
@@ -101,32 +105,34 @@ I saved the docker container configuration and setup to a new image *fast_dl* us
 % docker images
 ```
 
-## Using JupyterLab on our docker container
+## Start developing - Using JupyterLab inside a docker container
 
 >JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.
 
-I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by jupyter. To achieve this: spin up a new docker container (replace CONTAINER_NAME below), attaching the local project folder (`-v ~/Dev/deep-learning:/data` in my scenario) as a volume to the container, and mapping jupyter ports (`-p 8889:8888` in my sceario) to allow access to the container's jupyter instance. Local directory `~/Dev/deep-learning` will be synced to `/data` folder on the container while Local port `8889` will be mapped to the container's jupyter port `8888`.
+I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by Jupyter. 
+
+To achieve this, I launched a new docker container (with an interactive shell) attaching my local project folder as a volume using `-v ~/Dev/deep-learning:/data` (local folder `~/Dev/deep-learning` syncs to `/data` folder in the container). I mapped ports using `-p 8889:8888` (local port `8889` maps to the container's jupyter instance running on port `8888`).
 
 ```zsh
 % docker run -it -p 8889:8888 -v ~/Dev/deep-learning:/data --name CONTAINER_NAME fastai-dl /bin/bash
 ```
 
-The command above launches a container with an interactive shell. Launch jupyter using the following command.
+Once inside the container I launched jupyter using the following command:
 
 ```zsh
 % jupyter notebook --ip 0.0.0.0 --no-browser
 ```
 
-Voila! Jupyter can now be accessed locally at `https://localhost:8889`.
+Voila! I could access jupyter locally at `https://localhost:8889`.
 
 
 ![](jupyter.png)
 
 
-Now, go build your deep learning models. Happy building!
+You can [access and download a ready-to-use image](https://hub.docker.com/r/daajowi/fastai-dl) to kickstart your fastai development on MacOS, or setup a clean environment by following this guide. Happy building!
 
 ## Resources
-1. [Docker image ready for use in MacOS]()
+1. [fastai Docker Image for MacOS](https://hub.docker.com/r/daajowi/fastai-dl)
 2. [Course: Practical Deep Learning for Coders](https://course.fast.ai)
 3. [Book: Deep Learning for Coders with fastai and PyTorch](https://course.fast.ai)
 4. [fastai Docs](https://docs.fast.ai)
