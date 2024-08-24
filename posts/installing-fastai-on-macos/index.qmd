@@ -12,7 +12,7 @@ My deep learning journey accelerated when my friend and a former comrade (thank 
 
 In this guide, I share my experience setting up ```fastai``` on MacOS (with Apple silicon) and show you how to get started with development quickly.
 
-> You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). - fastai docs
+> You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). - [FastAI Docs](https://docs.fast.ai)
 
 Installation of ```fastai``` on MacOS is not supported. The good news, you can use ```fastai``` without installing it in your local machine - this is possible on [Google Colab](https://colab.google) or [Kaggle](https://kaggle.com) platforms. 
 
@@ -22,7 +22,11 @@ Often, I want to be able to work on projects locally. A good option is to use do
 
 > Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
 
-Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the **Applications** folder. Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).
+In a terminal, I downloaded and installed Docker Desktop for Mac(with Apple silicon) in the **Applications** folder. 
+:::{.callout-note}
+Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).
+:::
+
 
 ```zsh
 % wget https://desktop.docker.com/mac/main/arm64/Docker.dmg
@@ -32,25 +36,27 @@ Open up a terminal and run the following commands to download and install Docker
 % sudo hdiutil detach /Volumes/Docker
 ```
 
-Next, grab the latest ubuntu image from Docker Hub.
+Next, grabbed the latest ubuntu image from Docker Hub.
 
 ```zsh
 % docker pull ubuntu
 ```
 
-Create and start a new container in interactive mode. Replace *fastai-deep-learning* with your choice of container name.
+Created and launched a new container in interactive mode. 
 
 ```zsh
 % sudo docker run -it —name fastai-deep-learning ubuntu /bin/bash
 ```
 
-Update apt and install necessary packages
+I now have access to an interactive shell inside the container. Rest of the commands in this and the next [section](##install-fastai) are executed inside the container.
+
+Update `apt` and install necessary utility packages
 
 ```zsh
 % apt update && apt install wget unzip apt-utils
 ```
 
-The ubuntu ARM64 (M1) base image we downloaded and used above (unless you specify a different --platform in your build call if you decide to build a fresh image) does not come pre-populated with x86 shared objects. I had to install these and link them appropriately. Otherwise, I kept encountering this error message : ``qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory``.
+The ubuntu ARM64 (M1) base image downloaded and used above (unless a different --platform is specified in a build call if you decide to build a fresh image) does not come pre-populated with x86 shared objects. I had to install these and link them appropriately. Otherwise, I kept getting this error message: ``qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory``.
 
 ```zsh
 % apt install -y libc6-amd64-cross libstdc++6-amd64-cross
@@ -58,15 +64,9 @@ The ubuntu ARM64 (M1) base image we downloaded and used above (unless you specif
 % ln -s /usr/x86_64-linux-gnu/lib64/ /lib64
 ```
 
-Update apt and install necessary packages.
+## Installing `fastai`
 
-```zsh
-% apt update && apt install wget unzip apt-utils
-```
-
-## Install fastai
-
-First, download and install `miniconda`.
+Following the fastai docs, I downloaded and installed `miniconda`.
 
 ```zsh
 % mkdir -p ~/miniconda3
