@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>fastai</code> is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see <a href="##Resources">Resources</a> section for links to important material.</p>
 <p>In this guide, I share my experience setting up <code>fastai</code> on MacOS (with Apple silicon) and show you how to get started with development quickly.</p>
 <blockquote class="blockquote">
-<p>You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). - fastai docs</p>
+<p>You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported). - <a href="https://docs.fast.ai">FastAI Docs</a></p>
 </blockquote>
 <p>Installation of <code>fastai</code> on MacOS is not supported. The good news, you can use <code>fastai</code> without installing it in your local machine - this is possible on <a href="https://colab.google">Google Colab</a> or <a href="https://kaggle.com">Kaggle</a> platforms.</p>
 <p>Often, I want to be able to work on projects locally. A good option is to use docker containers. I opted to setup a container enviroment.</p>
@@ -204,46 +204,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.</p>
 </blockquote>
-<p>Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the <strong>Applications</strong> folder. Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).</p>
+<p>In a terminal, I downloaded and installed Docker Desktop for Mac(with Apple silicon) in the <strong>Applications</strong> folder. :::{.callout-note} Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience). :::</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> wget https://desktop.docker.com/mac/main/arm64/Docker.dmg</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> softwareupdate <span class="at">--install-rosetta</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo hdiutil attach Docker.dmg</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo /Volumes/Docker/Docker.app/Contents/MacOS/install <span class="at">--accept-license</span> <span class="at">--user</span><span class="op">=&lt;</span>username<span class="op">&gt;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo hdiutil detach /Volumes/Docker</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Next, grab the latest ubuntu image from Docker Hub.</p>
+<p>Next, grabbed the latest ubuntu image from Docker Hub.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker pull ubuntu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Create and start a new container in interactive mode. Replace <em>fastai-deep-learning</em> with your choice of container name.</p>
+<p>Created and launched a new container in interactive mode.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo docker run <span class="at">-it</span> —name fastai-deep-learning ubuntu /bin/bash</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Update apt and install necessary packages</p>
+<p>I now have access to an interactive shell inside the container. Rest of the commands in this and the next <a href="##install-fastai">section</a> are executed inside the container.</p>
+<p>Update <code>apt</code> and install necessary utility packages</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> apt update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> install wget unzip apt-utils</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The ubuntu ARM64 (M1) base image we downloaded and used above (unless you specify a different –platform in your build call if you decide to build a fresh image) does not come pre-populated with x86 shared objects. I had to install these and link them appropriately. Otherwise, I kept encountering this error message : <code>qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory</code>.</p>
+<p>The ubuntu ARM64 (M1) base image downloaded and used above (unless a different –platform is specified in a build call if you decide to build a fresh image) does not come pre-populated with x86 shared objects. I had to install these and link them appropriately. Otherwise, I kept getting this error message: <code>qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory</code>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> apt install <span class="at">-y</span> libc6-amd64-cross libstdc++6-amd64-cross</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> ln <span class="at">-s</span> /usr/x86_64-linux-gnu/lib/<span class="pp">*</span>.so.<span class="pp">*</span> /lib</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> ln <span class="at">-s</span> /usr/x86_64-linux-gnu/lib64/ /lib64</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Update apt and install necessary packages.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> apt update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> install wget unzip apt-utils</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="install-fastai" class="level2">
-<h2 class="anchored" data-anchor-id="install-fastai">Install fastai</h2>
-<p>First, download and install <code>miniconda</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> mkdir <span class="at">-p</span> ~/miniconda3</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> bash ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> rm <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="installing-fastai" class="level2">
+<h2 class="anchored" data-anchor-id="installing-fastai">Installing <code>fastai</code></h2>
+<p>Following the fastai docs, I downloaded and installed <code>miniconda</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> mkdir <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> bash ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> rm <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Install <code>pip</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo apt install python3-pip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo apt install python3-pip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Install <code>pytorch</code>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install pytorch torchvision torchaudio cpuonly <span class="at">-c</span> pytorch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install pytorch torchvision torchaudio cpuonly <span class="at">-c</span> pytorch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Finally, install fastai.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install <span class="at">-c</span> fastai fastai</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install <span class="at">-c</span> fastai fastai</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="create-a-new-docker-image" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-new-docker-image">Create a new docker image</h2>
 <p><code>docker ps -a</code> lists all containers. I located my container (<em>fastai-deep-learning</em> created <a href="##Setting-Up-A-Docker-Container">above</a>) and copied the container ID. Saved the container’s configuration and setup to a new image <em>fastai-dl</em> using docker’s <code>container commit</code>. I finally confirmed my newly created image exists using <code>docker images</code>.</p>
 <p><em>fastai-dl</em> image can be used for spinning a new ready-to-use container for fastai development on MacOS.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker ps <span class="at">-a</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker container commit <span class="at">-p</span> CONTAINER_ID fastai-dl</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker images</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker ps <span class="at">-a</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker container commit <span class="at">-p</span> CONTAINER_ID fastai-dl</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker images</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="start-developing---using-jupyterlab-inside-a-docker-container" class="level2">
 <h2 class="anchored" data-anchor-id="start-developing---using-jupyterlab-inside-a-docker-container">Start developing - Using JupyterLab inside a docker container</h2>
@@ -252,9 +251,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by Jupyter.</p>
 <p>To achieve this, I launched a new docker container (with an interactive shell) attaching my local project folder as a volume using <code>-v ~/Dev/deep-learning:/data</code> (local folder <code>~/Dev/deep-learning</code> syncs to <code>/data</code> folder in the container). I mapped ports using <code>-p 8889:8888</code> (local port <code>8889</code> maps to the container’s jupyter instance running on port <code>8888</code>).</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker run <span class="at">-it</span> <span class="at">-p</span> 8889:8888 <span class="at">-v</span> ~/Dev/deep-learning:/data <span class="at">--name</span> CONTAINER_NAME fastai-dl /bin/bash</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker run <span class="at">-it</span> <span class="at">-p</span> 8889:8888 <span class="at">-v</span> ~/Dev/deep-learning:/data <span class="at">--name</span> CONTAINER_NAME fastai-dl /bin/bash</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Once inside the container I launched jupyter using the following command:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> jupyter notebook <span class="at">--ip</span> 0.0.0.0 <span class="at">--no-browser</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> jupyter notebook <span class="at">--ip</span> 0.0.0.0 <span class="at">--no-browser</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Voila! I could access jupyter locally at <code>https://localhost:8889</code>.</p>
 <p><img src="jupyter.png" class="img-fluid"></p>
 <p>You can <a href="https://hub.docker.com/r/daajowi/fastai-dl">access and download a ready-to-use image</a> to kickstart your fastai development on MacOS, or setup a clean environment by following this guide. Happy building!</p>
