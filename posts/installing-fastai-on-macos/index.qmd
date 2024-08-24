@@ -129,7 +129,7 @@ Voila! I could access jupyter locally at `https://localhost:8889`.
 ![](jupyter.png)
 
 
-You can [access and download a ready-to-use image](https://hub.docker.com/r/daajowi/fastai-dl) to kickstart your fastai development on MacOS, or setup a clean environment by following this guide. Happy building!
+You can [access and download a ready-to-use docker image](https://hub.docker.com/r/daajowi/fastai-dl) to kickstart your fastai development on MacOS, or setup a clean environment by following this guide. Happy building!
 
 ## Resources
 1. [fastai Docker Image for MacOS](https://hub.docker.com/r/daajowi/fastai-dl)
