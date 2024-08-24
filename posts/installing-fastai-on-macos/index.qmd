@@ -1,5 +1,5 @@
 ---
-title: "Deep Learning Development: Setting up FastAI on MacOS"
+title: "Deep Learning Development: Setup FastAI on MacOS"
 subtitle: "In this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly."
 author: "David Ajowi"
 date: "2024-07-28"
