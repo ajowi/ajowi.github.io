@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
-<meta name="dcterms.date" content="2024-07-31">
+<meta name="author" content="David Ajowi">
+<meta name="dcterms.date" content="2024-07-28">
 
-<title>Post With Code – David Ajowi’s Blog</title>
+<title>Deep Learning Development: Setting up FastAI on MacOS – David Ajowi’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -115,11 +149,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
+      <h1 class="title">Deep Learning Development: Setting up FastAI on MacOS</h1>
+            <p class="subtitle lead">In this guide I share my experience setting up fastai on MacOS and show you how to get started quickly.</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">deep learning</div>
+                <div class="quarto-category">fastai</div>
               </div>
                   </div>
   </div>
@@ -130,14 +164,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>David Ajowi </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 31, 2024</p>
+        <p class="date">July 28, 2024</p>
       </div>
     </div>
     
@@ -156,9 +190,83 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is a post with executable code.</p>
+<p>My deep learning journey accelerated when my friend and a former comrade (thank you, Martin Chiteri) pointed me to the famous <em>Practical Deep Learning for Coders</em> course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book <em>Deep Learning for Coders with fastai and PyTorch</em>(also freely available online).</p>
+<p>fastai is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see <a href="##Resources">Resources</a> for links to important materials.</p>
+<p>In the following sections, I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started with development quickly.</p>
+<blockquote class="blockquote">
+<p>You can install fastai on your own machines with conda (highly recommended), as long as you’re running Linux or Windows (NB: Mac is not supported).</p>
+</blockquote>
+<p>Installation of fastai on MacOS is not supported as evidenced by the above statement from the fastai docs website. The good news, we can use fastai without installation by using <a href="https://colab.google">Google Colab</a> or <a href="https://kaggle.com">Kaggle</a>.</p>
+<p>Often, I want to be able to work on projects locally. A good option is to use docker containers (see <a href="##Resources">Resources</a> for official docker containers for the project). And so I opted to setup a container enviroment for my scenario.</p>
+<section id="setting-up-a-docker-container" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-a-docker-container">Setting up a docker container</h2>
+<blockquote class="blockquote">
+<p>Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.</p>
+</blockquote>
+<p>Open up a terminal and run the following commands to download and install Docker Desktop for Mac(with Apple silicon) in the <strong>Applications</strong> folder. Beginning version 4.3.0 Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> wget https://desktop.docker.com/mac/main/arm64/Docker.dmg</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> softwareupdate <span class="at">--install-rosetta</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo hdiutil attach Docker.dmg</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo /Volumes/Docker/Docker.app/Contents/MacOS/install <span class="at">--accept-license</span> <span class="at">--user</span><span class="op">=&lt;</span>username<span class="op">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo hdiutil detach /Volumes/Docker</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Next, grab the latest ubuntu image from Docker Hub.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker pull ubuntu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create and start a new container in interactive mode. Replace <em>fastai-deep-learning</em> with your choice of container name.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo docker run <span class="at">-it</span> —name fastai-deep-learning ubuntu /bin/bash</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Update apt and install necessary packages</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> apt update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> install wget unzip apt-utils</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The ubuntu ARM64 (M1) base image we downloaded and used above (unless you specify a different –platform in your build call if you decide to build a fresh image) does not come pre-populated with x86 shared objects. I had to install these and link them appropriately. Otherwise, I kept encountering this error message : <code>qemu-x86_64: Could not open '/lib64/ld-linux-x86-64.so.2': No such file or directory</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> apt install <span class="at">-y</span> libc6-amd64-cross libstdc++6-amd64-cross</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> ln <span class="at">-s</span> /usr/x86_64-linux-gnu/lib/<span class="pp">*</span>.so.<span class="pp">*</span> /lib</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> ln <span class="at">-s</span> /usr/x86_64-linux-gnu/lib64/ /lib64</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Update apt and install necessary packages.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> apt update <span class="kw">&amp;&amp;</span> <span class="ex">apt</span> install wget unzip apt-utils</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="install-fastai" class="level2">
+<h2 class="anchored" data-anchor-id="install-fastai">Install fastai</h2>
+<p>First, download and install <code>miniconda</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> mkdir <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> bash ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> rm <span class="at">-rf</span> ~/miniconda3/miniconda.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Install <code>pip</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> sudo apt install python3-pip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Install <code>pytorch</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install pytorch torchvision torchaudio cpuonly <span class="at">-c</span> pytorch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Finally, install fastai.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> conda install <span class="at">-c</span> fastai fastai</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I saved the docker container configuration and setup to a new image <em>fast_dl</em> using docker’s <code>commit</code> command below. <code>ps</code> lists all containers, I then copied the ID (replace CONTAINER_ID with this) of my container <em>fastai-deep-learning</em> (this is the container we created above). Then confirmed my newly created image exists using <code>docker images</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker ps <span class="at">-a</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker container commit <span class="at">-p</span> CONTAINER_ID fastai-dl</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker images</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="using-jupyterlab-on-our-docker-container" class="level2">
+<h2 class="anchored" data-anchor-id="using-jupyterlab-on-our-docker-container">Using JupyterLab on our docker container</h2>
+<blockquote class="blockquote">
+<p>JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.</p>
+</blockquote>
+<p>I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by jupyter. To achieve this: spin up a new docker container (replace CONTAINER_NAME below), attaching the local project folder (<code>-v ~/Dev/deep-learning:/data</code> in my scenario) as a volume to the container, and mapping jupyter ports (<code>-p 8889:8888</code> in my sceario) to allow access to the container’s jupyter instance. Local directory <code>~/Dev/deep-learning</code> will be synced to <code>/data</code> folder on the container while Local port <code>8889</code> will be mapped to the container’s jupyter port <code>8888</code>.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker run <span class="at">-it</span> <span class="at">-p</span> 8889:8888 <span class="at">-v</span> ~/Dev/deep-learning:/data <span class="at">--name</span> CONTAINER_NAME fastai-dl /bin/bash</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The command above launches a container with an interactive shell. Launch jupyter using the following command.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> jupyter notebook <span class="at">--ip</span> 0.0.0.0 <span class="at">--no-browser</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Voila! Jupyter can now be accessed locally at <code>https://localhost:8889</code>.</p>
+<p><img src="jupyter.png" class="img-fluid"></p>
+<p>Now, go build your deep learning models. Happy building!</p>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ol type="1">
+<li><a href="">Docker image ready for use in MacOS</a></li>
+<li><a href="https://course.fast.ai">Course: Practical Deep Learning for Coders</a></li>
+<li><a href="https://course.fast.ai">Book: Deep Learning for Coders with fastai and PyTorch</a></li>
+<li><a href="https://docs.fast.ai">fastai Docs</a></li>
+<li><a href="https://docs.docker.com/manuals">Docker Docs</a></li>
+<li><a href="https://jupyter.org">Jupyter Lab Docs</a></li>
+<li><a href="https://pytorch.org">PyTorch Website</a></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
