@@ -23,7 +23,8 @@ Often, I want to be able to work on projects locally. A good option is to use do
 > Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
 
 In a terminal, I downloaded and installed Docker Desktop for Mac(with Apple silicon) in the **Applications** folder.
- 
+
+
 :::{.callout-note}
 Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 2 (but still recommend it to get the best experience).
 :::
@@ -130,7 +131,9 @@ Voila! I could access jupyter locally at `https://localhost:8889`.
 ![](jupyter.png)
 
 
-You can [access and download a ready-to-use docker image](https://hub.docker.com/r/daajowi/fastai-dl) to kickstart your fastai development on MacOS, or setup a clean environment by following this guide. Happy building!
+You can [access and download a ready-to-use docker image](https://hub.docker.com/r/daajowi/fastai-dl) to kickstart your fastai development on MacOS, or setup a clean environment by following this guide. 
+
+Happy building!
 
 ## Resources
 1. [fastai Docker Image for MacOS](https://hub.docker.com/r/daajowi/fastai-dl)
