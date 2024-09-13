@@ -1,17 +1,17 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome! My name is David Ajowi. I am an IT professional based in Nairobi, Kenya.\nSince 2019, I have been developing software. I have had the privilege to lead diverse technical teams, manage successful product developments, build enterprise IT infrastructure for global enterprises, and provide IT leadership.\nI write about my own personal experiences, learnings and thoughts - on work and life. Luckily, you find and take away something useful in my sharing."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Latest Entries",
     "section": "",
     "text": "Deep Learning Development: Setup FastAI on MacOS\n\n\nIn this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly.\n\n\n\ndeep learning\n\n\nfastai\n\n\nguides\n\n\n\n\n\n\n\n\n\nJul 28, 2024\n\n\nDavid Ajowi\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
   },
   {
     "objectID": "posts/installing-fastai-on-macos/index.html",
