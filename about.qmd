@@ -6,7 +6,7 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/daaj
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/davidajowi
@@ -16,4 +16,8 @@ about:
 
 ---
 
-About this blog
+Welcome! My name is David Ajowi. I am an IT professional based in Nairobi, Kenya. 
+
+Since 2019, I have been developing software. I have had the privilege to lead diverse technical teams, manage successful product developments, build enterprise IT infrastructure for global enterprises, and provide IT leadership.
+
+I write about my own personal experiences, learnings and thoughts - on work and life. Luckily, you find and take away something useful in my sharing.
