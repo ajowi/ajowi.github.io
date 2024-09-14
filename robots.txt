@@ -1,1 +1,1 @@
-Sitemap: https://ajowi.github.io/sitemap.xml
+Sitemap: https://davidajowi.com/sitemap.xml
