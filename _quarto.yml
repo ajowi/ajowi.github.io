@@ -4,6 +4,7 @@ project:
 website:
   title: "David Ajowi"
   navbar:
+    background: light
     right:
       - about.qmd
       - icon: twitter
@@ -16,6 +17,7 @@ website:
   open-graph: true
   site-url: https://davidajowi.com
   repo-url: https://github.com/ajowi/ajowi.github.io
+  favicon: "favicon.ico"
 format:
   html:
     theme: cosmo

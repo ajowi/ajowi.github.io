@@ -8,7 +8,8 @@ listing:
   sort-ui: false
   filter-ui: false
 page-layout: full
-title-block-banner: true
+title-block-banner: "rgb(244, 236, 220)"
+title-block-banner-color: body
 ---
 
 
