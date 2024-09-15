@@ -9,7 +9,7 @@ website:
       - text: "Home"
         href: index.qmd
       - about.qmd
-      - icon: twitter
+      - icon: twitter-x
         href: https://twitter.com/daaj
       - icon: linkedin
         href: https://linkedin.com/in/davidajowi
