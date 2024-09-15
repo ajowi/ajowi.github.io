@@ -6,6 +6,8 @@ website:
   navbar:
     background: light
     right:
+      - text: "Home"
+        href: index.qmd
       - about.qmd
       - icon: twitter
         href: https://twitter.com/daaj
