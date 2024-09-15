@@ -99,7 +99,7 @@ Finally, install fastai.
 
 `docker ps -a` lists all containers. I located my container (*fastai-deep-learning* created [above](##Setting-Up-A-Docker-Container)) and copied the container ID. Saved the container's configuration and setup to a new image *fastai-dl* using docker's `container commit`. I finally confirmed my newly created image exists using `docker images`. 
 
-*fastai-dl* image can be used for spinning a new ready-to-use container for fastai development on MacOS.
+*fastai-dl* image can now be used to create a new ready-to-use container for fastai development on MacOS.
 
 ```zsh
 % docker ps -a
