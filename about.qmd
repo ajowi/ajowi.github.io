@@ -4,9 +4,9 @@ image: daaj.jpeg
 about:
   template: jolla
   links:
-    - icon: twitter
+    - icon: twitter-x
       text: Twitter
-      href: https://twitter.com/daaj
+      href: https://x.com/daaj
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/davidajowi
