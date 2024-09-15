@@ -39,7 +39,7 @@
     "href": "posts/installing-fastai-on-macos/index.html#create-a-new-docker-image",
     "title": "Deep Learning Development: Setup FastAI on MacOS",
     "section": "Create a new docker image",
-    "text": "Create a new docker image\ndocker ps -a lists all containers. I located my container (fastai-deep-learning created above) and copied the container ID. Saved the container’s configuration and setup to a new image fastai-dl using docker’s container commit. I finally confirmed my newly created image exists using docker images.\nfastai-dl image can be used for spinning a new ready-to-use container for fastai development on MacOS.\n% docker ps -a\n% docker container commit -p CONTAINER_ID fastai-dl\n% docker images"
+    "text": "Create a new docker image\ndocker ps -a lists all containers. I located my container (fastai-deep-learning created above) and copied the container ID. Saved the container’s configuration and setup to a new image fastai-dl using docker’s container commit. I finally confirmed my newly created image exists using docker images.\nfastai-dl image can now be used to create a new ready-to-use container for fastai development on MacOS.\n% docker ps -a\n% docker container commit -p CONTAINER_ID fastai-dl\n% docker images"
   },
   {
     "objectID": "posts/installing-fastai-on-macos/index.html#start-developing---using-jupyterlab-inside-a-docker-container",

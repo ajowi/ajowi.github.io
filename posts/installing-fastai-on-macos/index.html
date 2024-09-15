@@ -274,7 +274,7 @@ Note
 <section id="create-a-new-docker-image" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-new-docker-image">Create a new docker image</h2>
 <p><code>docker ps -a</code> lists all containers. I located my container (<em>fastai-deep-learning</em> created <a href="##Setting-Up-A-Docker-Container">above</a>) and copied the container ID. Saved the container’s configuration and setup to a new image <em>fastai-dl</em> using docker’s <code>container commit</code>. I finally confirmed my newly created image exists using <code>docker images</code>.</p>
-<p><em>fastai-dl</em> image can be used for spinning a new ready-to-use container for fastai development on MacOS.</p>
+<p><em>fastai-dl</em> image can now be used to create a new ready-to-use container for fastai development on MacOS.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker ps <span class="at">-a</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker container commit <span class="at">-p</span> CONTAINER_ID fastai-dl</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> docker images</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
