@@ -18,6 +18,6 @@ about:
 
 Welcome! I am David Ajowi: an IT professional currently based in Nairobi, Kenya. 
 
-Since 2019, I develop software and support teams maximize business value by adopting agile practises. I have had the privilege to lead diverse technical teams, oversee successful product launches, build enterprise IT infrastructure for global enterprises, and provide IT leadership.
+Since 2019, I develop software and support teams to maximize business value by adopting agile practises. I have had the privilege to lead diverse technical teams, oversee successful product launches, build enterprise IT infrastructure for global enterprises, and provide IT leadership.
 
 I write about my own personal experiences, learnings and thoughts - on work and life. Luckily, you find and take away something useful in my sharing.
