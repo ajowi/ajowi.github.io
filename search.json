@@ -56,17 +56,38 @@
     "text": "Resources\n\nfastai Docker Image for MacOS\nCourse: Practical Deep Learning for Coders\nBook: Deep Learning for Coders with fastai and PyTorch\nfastai Docs\nDocker Docs\nJupyter Lab Docs\nPyTorch Website"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "Deep Learning Development: Setup FastAI on MacOS\n\n\nIn this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly.\n\n\n\ndeep learning\n\n\nfastai\n\n\nguides\n\n\n\n\n\n\n\n\n\nJul 28, 2024\n\n\nDavid Ajowi\n\n\n\n\n\n\n\n\n\n\n\n\nA Recipe For High-Performing Teams\n\n\n\n\n\n\nagile\n\n\nscrum\n\n\nteams\n\n\n\n\n\n\n\n\n\nAug 2, 2023\n\n\nDavid Ajowi\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "Welcome! I am David Ajowi: an IT professional currently based in Nairobi, Kenya.\nSince 2019, I develop software and support teams to maximize business value by adopting agile practises. I have had the privilege to lead diverse technical teams, oversee successful product launches, build enterprise IT infrastructure for global enterprises, and provide IT leadership.\nI write about my own personal experiences, learnings and thoughts - on work and life. Luckily, you find and take away something useful in my sharing."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Deep Learning Development: Setup FastAI on MacOS\n\n\nIn this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly.\n\n\n\ndeep learning\n\n\nfastai\n\n\nguides\n\n\n\n\n\n\n\n\n\nJul 28, 2024\n\n\nDavid Ajowi\n\n\n\n\n\n\n\n\n\n\n\n\nA Recipe For High-Performing Teams\n\n\nHigh-performing teams have a shared vision that they collectively commit to, are highly empowered, are self-organizing, fosters a culture of continous learning, trust runs deep in their nerves, and displays a high level of open communication and collaboration to deliver consistent and extraordinary results.\n\n\n\nagile\n\n\nscrum\n\n\nteams\n\n\n\n\n\n\n\n\n\nAug 2, 2023\n\n\nDavid Ajowi\n\n\n\n\n\n\n\n\n\n\n\n\nAgile Mindset\n\n\nMany organisations that fail in their quest to business agility often stop at doing Agile. Being Agile requires a mindset shift - in the organization’s culture, people, leadership and governance.\n\n\n\nagile\n\n\nscrum\n\n\n\n\n\n\n\n\n\nApr 27, 2023\n\n\nDavid Ajowi\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/agile-mindset/index.html",
+    "href": "posts/agile-mindset/index.html",
+    "title": "Agile Mindset",
+    "section": "",
+    "text": "Being Agile means you embrace Agile principles and values and are able to tailor or adapt processes to respond swiftly and effectively to business opportunities and threats, both internally and externally. Agile organizations foster a collaborative environment that allows its people to explore creative and innovative ways of doing things, getting results and achieving business value fast.\nOn the other hand, doing Agile means you follow Agile practises (and I bet doing them pretty well) but stuck in your traditional rigid industrial mindset. Do NOT stop at doing Agile, NEVER ever get comfortable - you need a complete mindset shift."
+  },
+  {
+    "objectID": "posts/agile-mindset/index.html#do-i-have-an-agile-mindset",
+    "href": "posts/agile-mindset/index.html#do-i-have-an-agile-mindset",
+    "title": "Agile Mindset",
+    "section": "Do I have an Agile mindset?",
+    "text": "Do I have an Agile mindset?\nYou do, if:\nYou potray a way of working that exhibits willingness to learn, adaptable to change, you embrace collaboration and teamwork, and you are nimble. These attributes aids in driving high-perfomance at individual, team and organization levels - an outcome synonymous with agility.\nYou prioritize value-driven delivery of products, services and/or projects.\nTeams having this mindset tend to identify with: - Work in an Agile manner - Deliver business value quickly (and incrementally) and obtain feedabck to benefit the next delivery cycle (think of sprints) - Act in a transparent manner - Focus on delivering high priority work (with available resources) and avoid non-priority items - Adopt a servant leadership approach to benefit achievement of business and team goals - Self-organize - Influence others to embrace Agile\nOrganizations (or teams/individuals) eager for agility must be ready to respond effectively to change and embrace change by adopting a change mindset. Inversely, it becomes a futile undertaking without it - as you are bound to miss the mark in your journey to agility.\nChange is a constant in everything we do.\nAnd, in present business environment change is inevitable. Change could be triggered by a competitor introducing new rival product/service in the market, civil unrests caused by regime changes, changes in legislation affecting a product/service, pandemics, and what have you.\nWe must uncompromisingly either embrace change (and continous improvement) or perish! That’s an Agile mindset."
+  },
+  {
+    "objectID": "posts/agile-mindset/index.html#in-conclusion",
+    "href": "posts/agile-mindset/index.html#in-conclusion",
+    "title": "Agile Mindset",
+    "section": "In conclusion",
+    "text": "In conclusion\nTo be truly Agile you must embrace and anchor all the four core values of Agile in your operations - value individuals and interactions over processes and tools, value working software (or product/service) over comprehensive documentation, value customer collaboration over contract negotiations, and religiously value responding to change over following a plan.\nOrganizations that adopt an Agile mindset will be able to achieve extraordinary results because they are inclined to become: - Customer-obsessed: allowing them to respond rapidly and flexibly to customer needs to guarantee satisfaction - Receptive to change (change mindset): thus adapting to volatile internal and external market changes - Cost-efficient: by prioritizing value-driven delivery (with available resources) without compromising on quality - Competitive: through continous improvement and delivery - Highly productive: by delivering in small, collaborative and self-organizing teams\n\nAdditional Reading and References\n\nAgile Manifesto\nAgile Resources"
   }
 ]
