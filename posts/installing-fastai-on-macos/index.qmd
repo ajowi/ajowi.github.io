@@ -6,7 +6,7 @@ date: "2024-07-28"
 categories: [deep learning, fastai, guides]
 ---
 
-My deep learning journey accelerated when my friend and a former comrade (thank you, Martin Chiteri) pointed me to the famous *Practical Deep Learning for Coders* course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book *Deep Learning for Coders with fastai and PyTorch* (also freely available online).
+My deep learning journey accelerated when my friend ([Martin Chiteri](http://geek.co.ke)) pointed me to the famous *Practical Deep Learning for Coders* course from Fast.ai - a free online course that will teach you how to apply practical deep learning and machine learning to train fast and accurate neural nerworks. The course is based on an equally great book *Deep Learning for Coders with fastai and PyTorch* (also freely available online).
 
 ```fastai``` is a machine learning library built on top of PyTorch that provides a consitent interface to the most frequently used deep learning applications. It is extensively documented - see [Resources](##Resources) section for links to important material.
 
