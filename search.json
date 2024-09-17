@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/high-performing-teams/index.html",
+    "href": "posts/high-performing-teams/index.html",
+    "title": "A Recipe For High-Performing Teams",
     "section": "",
-    "text": "Welcome! I am David Ajowi: an IT professional currently based in Nairobi, Kenya.\nSince 2019, I develop software and support teams to maximize business value by adopting agile practises. I have had the privilege to lead diverse technical teams, oversee successful product launches, build enterprise IT infrastructure for global enterprises, and provide IT leadership.\nI write about my own personal experiences, learnings and thoughts - on work and life. Luckily, you find and take away something useful in my sharing."
+    "text": "In her book Coaching Agile Teams, Lyssa Adkins talks about the use of Metaphors and how powerful they can be in impacting team performance.\nShe writes:\nAdmittedly, I am a fan of the High Performance Tree (HPT) and it has become a favourite image I use to set expectation of high performance in the teams I work with.\nLyssa states:"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "Deep Learning Development: Setup FastAI on MacOS\n\n\nIn this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly.\n\n\n\ndeep learning\n\n\nfastai\n\n\nguides\n\n\n\n\n\n\n\n\n\nJul 28, 2024\n\n\nDavid Ajowi\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/high-performing-teams/index.html#high-perfoming-team-recipe",
+    "href": "posts/high-performing-teams/index.html#high-perfoming-team-recipe",
+    "title": "A Recipe For High-Performing Teams",
+    "section": "High Perfoming Team Recipe",
+    "text": "High Perfoming Team Recipe\nToday, I’ll attempt to create a recipe for a high performing team. If you are familiar with Agile and Scrum you will immediately recognize the main ingredients for this sumptious meal. You will notice they are the Scrum values - and also the roots of the HPT above.\n\nIngredients\n\nA team\nVision\n1 cup Commitment\n1 cup of Focus\n1 cup of Openness\n1 Cup of Respect\n1 Cup of Courage\n\nPreparation time:  Depends on how fast ingredients fully blend.\n\n\nMethod\n\nSetup a team or take an existing team. You have to be observant on what stage the team is at (forming, storming, norming or performing?) - but really it does not matter, team dynamics (right skills and diversity, right size, norms and ground rules, right resources available?), and cognizant of any specific immediate challenges or issues the team is facing. The team can be co-located or remote. Team coaching is an essential enabler.\nAdd a vision to the Team and mix (yes, you got that right). Create a shared understanding of the vision. It is crucial for the team to have a compelling purpose that is clear, challenging and important - the vision should be inspiring to work towards.\nAdd 1 cup of commitment, mix. For a team to achive its goals and objectives members must commit to what they say they are going to do. Help the team to keep distractions at bay, allowing then to commit to a goal and mostly importantly team success. Team members should only agree to take on tasks they believe they can complete, to avoid overcommiting.\nAdd 1 cup of focus, mix. Now the team is able to focus on their commitments and do just that they have commited to and nothing else. Finish what you start.\nAdd 1 cup of openness, mix. The result is transparency - nothing is hidden, there is free flow of information, trust builds into the team, and members know what direction the team is headed. New ideas and opinions thrive, and there is no room for doubt in the team.\nAdd 1 cup of respect, mix. Everyone has a distict contribution they bring to the table, respecting everyone’s ideas and their individual unique traits ensures the team is able to work together collaboratively towards its goal. There is room to make mistakes as they are regarded as learning opportunities.\nAdd 1 cup of courage, mix. Yes, the team can do anything, and have the spirit to inspect and adapt. The team is adapted to change. The team does not fear sailing in uncharted waters.\nMix until fully blended.\n\nYou know the team is high-performing when you start to see extra-ordinary results, the team is creating the right business value (fast and frequently), and there is evident (and measurable) team and individual growth.\nLyssa on telling when the HPT has taken hold, concludes:\n\nIt’s when the team talks about the tree as a metaphor for themselves and their chosen pathway to high perfomance:\n\n‘We can grown if we stengthen our root.’\n\nThat’s when the power of metaphor shines through and becomes something useful to them, helping them survice turbulent change or reach for that next big goal.\n\n\n\nAdditional Reading and References\n\nCoaching Agile Teams\nWhat is SCRUM: A Guide to the Most Popular Agile Framework"
   },
   {
     "objectID": "posts/installing-fastai-on-macos/index.html",
@@ -54,5 +54,19 @@
     "title": "Deep Learning Development: Setup FastAI on MacOS",
     "section": "Resources",
     "text": "Resources\n\nfastai Docker Image for MacOS\nCourse: Practical Deep Learning for Coders\nBook: Deep Learning for Coders with fastai and PyTorch\nfastai Docs\nDocker Docs\nJupyter Lab Docs\nPyTorch Website"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Deep Learning Development: Setup FastAI on MacOS\n\n\nIn this guide I share my experience setting up fastai on MacOS (with Apple silicon) and show you how to get started quickly.\n\n\n\ndeep learning\n\n\nfastai\n\n\nguides\n\n\n\n\n\n\n\n\n\nJul 28, 2024\n\n\nDavid Ajowi\n\n\n\n\n\n\n\n\n\n\n\n\nA Recipe For High-Performing Teams\n\n\n\n\n\n\nagile\n\n\nscrum\n\n\nteams\n\n\n\n\n\n\n\n\n\nAug 2, 2023\n\n\nDavid Ajowi\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome! I am David Ajowi: an IT professional currently based in Nairobi, Kenya.\nSince 2019, I develop software and support teams to maximize business value by adopting agile practises. I have had the privilege to lead diverse technical teams, oversee successful product launches, build enterprise IT infrastructure for global enterprises, and provide IT leadership.\nI write about my own personal experiences, learnings and thoughts - on work and life. Luckily, you find and take away something useful in my sharing."
   }
 ]
