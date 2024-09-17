@@ -1,6 +1,6 @@
 ---
 title: "A Recipe For High-Performing Teams"
-subtitle: ""
+subtitle: "High-performing teams have a shared vision that they collectively commit to, are highly empowered, are self-organizing, fosters a culture of continous learning, trust runs deep in their nerves, and displays a high level of open communication and collaboration to deliver consistent and extraordinary results."
 author: "David Ajowi"
 date: "2023-08-02"
 categories: [agile, scrum, teams]

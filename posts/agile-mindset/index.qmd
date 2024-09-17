@@ -1,0 +1,55 @@
+---
+title: "Agile Mindset"
+subtitle: "Many organisations that fail in their quest to business agility often stop at doing Agile. Being Agile requires a mindset shift - in the organization's culture, people, leadership and governance."
+author: "David Ajowi"
+date: "2023-04-27"
+categories: [agile, scrum]
+image: "install-agile.png"
+---
+
+Being Agile means you embrace Agile principles and values and are able to tailor or adapt processes to respond swiftly and effectively to business opportunities and threats, both internally and externally. Agile organizations foster a collaborative environment that allows its people to explore creative and innovative ways of doing things, getting results and achieving business value fast.
+
+On the other hand, doing Agile means you follow Agile practises (and I bet doing them pretty well) but stuck in your traditional rigid industrial mindset. Do NOT stop at doing Agile, NEVER ever get comfortable - you need a complete mindset shift. 
+
+## Do I have an Agile mindset?
+
+You do, if:
+
+You potray a way of working that exhibits willingness to learn, adaptable to change, you embrace collaboration and teamwork, and you are nimble. These attributes aids in driving high-perfomance at individual, team and organization levels - an outcome synonymous with agility. 
+
+You prioritize value-driven delivery of products, services and/or projects. 
+
+Teams having this mindset tend to identify with:
+- Work in an Agile manner
+- Deliver business value quickly (and incrementally) and obtain feedabck to benefit the next delivery cycle (think of sprints)
+- Act in a transparent manner
+- Focus on delivering high priority work (with available resources) and avoid non-priority items
+- Adopt a servant leadership approach to benefit achievement of business and team goals
+- Self-organize
+- Influence others to embrace Agile
+
+
+Organizations (or teams/individuals) eager for agility must be ready to respond effectively to change and embrace change by adopting a change mindset. Inversely, it becomes a futile undertaking without it - as you are bound to miss the mark in your journey to agility.
+
+Change is a constant in everything we do. 
+
+And, in present business environment change is inevitable. Change could be triggered by a competitor introducing new rival product/service in the market, civil unrests caused by regime changes, changes in legislation affecting a product/service, pandemics, and what have you. 
+
+We must uncompromisingly either embrace change (and continous improvement) or perish! That's an Agile mindset.
+
+## In conclusion
+
+To be truly Agile you must embrace and anchor all the four core values of Agile in your operations - value individuals and interactions over processes and tools, value working software (or product/service) over comprehensive documentation, value customer collaboration over contract negotiations, and religiously value responding to change over following a plan.
+
+Organizations that adopt an Agile mindset will be able to achieve extraordinary results because they are inclined to become:
+- Customer-obsessed: allowing them to respond rapidly and flexibly to customer needs to guarantee satisfaction
+- Receptive to change (change mindset): thus adapting to volatile internal and external market changes
+- Cost-efficient: by prioritizing value-driven delivery (with available resources) without compromising on quality
+- Competitive: through continous improvement and delivery
+- Highly productive: by delivering in small, collaborative and self-organizing teams
+
+### Additional Reading and References
+1. [Agile Manifesto](https://agilemanifesto.org)
+2. [Agile Resources](https://resources.agilealliance.org)
+
+---
