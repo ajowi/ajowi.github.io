@@ -1,5 +1,6 @@
 ---
 title: "Blog Posts"
+subtitle: "I write about my own personal experiences, learnings and thoughts - on work and life."
 listing:
   contents: posts
   sort: "date desc"
