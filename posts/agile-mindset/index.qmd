@@ -20,6 +20,7 @@ You potray a way of working that exhibits willingness to learn, adaptable to cha
 You prioritize value-driven delivery of products, services and/or projects. 
 
 Teams having this mindset tend to identify with:
+
 - Work in an Agile manner
 - Deliver business value quickly (and incrementally) and obtain feedabck to benefit the next delivery cycle (think of sprints)
 - Act in a transparent manner
@@ -42,6 +43,7 @@ We must uncompromisingly either embrace change (and continous improvement) or pe
 To be truly Agile you must embrace and anchor all the four core values of Agile in your operations - value individuals and interactions over processes and tools, value working software (or product/service) over comprehensive documentation, value customer collaboration over contract negotiations, and religiously value responding to change over following a plan.
 
 Organizations that adopt an Agile mindset will be able to achieve extraordinary results because they are inclined to become:
+
 - Customer-obsessed: allowing them to respond rapidly and flexibly to customer needs to guarantee satisfaction
 - Receptive to change (change mindset): thus adapting to volatile internal and external market changes
 - Cost-efficient: by prioritizing value-driven delivery (with available resources) without compromising on quality
