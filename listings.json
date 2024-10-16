@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/creative-learning/index.html",
       "/posts/installing-fastai-on-macos/index.html",
       "/posts/high-performing-teams/index.html",
       "/posts/agile-mindset/index.html"
