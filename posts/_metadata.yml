@@ -7,6 +7,7 @@ freeze: true
 # Enable banner style title blocks
 title-block-banner: "rgb(244, 236, 220)"
 title-block-banner-color: body
+# back-to-top-navigation: true
 comments:
   giscus:
     repo: ajowi/ajowi.github.io

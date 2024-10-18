@@ -4,7 +4,10 @@ project:
 website:
   title: "David Ajowi"
   navbar:
+    title: false
     background: light
+    logo: "alogo-transparent.png"
+    logo-alt: "David Ajowi"
     right:
       - text: "Home"
         href: index.qmd
@@ -15,11 +18,15 @@ website:
         href: https://linkedin.com/in/davidajowi
       - icon: github
         href: https://github.com/ajowi
+  bread-crumbs: true
   twitter-card: true
   open-graph: true
   site-url: https://davidajowi.com
   repo-url: https://github.com/ajowi/ajowi.github.io
   favicon: "favicon.ico"
+  image: "daaj.jpeg"
+  page-footer: 
+    center: "Copyright &copy; 2024, David Ajowi"
 format:
   html:
     theme: cosmo

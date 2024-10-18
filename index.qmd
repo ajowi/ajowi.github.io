@@ -1,6 +1,6 @@
 ---
-title: "Blog Posts"
-subtitle: "I write about my own personal experiences, learnings and thoughts - on work and life."
+title: "Blog"
+subtitle: "Welcome! I am David Ajowi. I write about my own personal experiences, learnings and thoughts - on work and life."
 listing:
   contents: posts
   sort: "date desc"
@@ -8,6 +8,7 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
+  page-size: 20
 page-layout: full
 title-block-banner: "rgb(244, 236, 220)"
 title-block-banner-color: body
