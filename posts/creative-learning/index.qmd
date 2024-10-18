@@ -17,7 +17,7 @@ To think creatively you have to constantly learn, un-learn and re-learn---in cre
 
 But, why this approach? 
 
-Noteworthy, is the interactive creative learning process kindergarten children experience when building---say---a tower, using blocks. First, they imagine a fantasy tower. Then they start building the tower, then they constantly toy with and experiment with different heights and designs (the tower sometimes collapse), they collaborate and share ideas as they build. When the tower collapses they reflect and rebuild it based on the new information they just discovered. Finally, based on these experiences, they imagine even more ideas to improve their new creation.
+Noteworthy, is the interactive creative learning process kindergarten children experience when building---say---a tower, using blocks. First, they imagine a fantasy tower. Then they start building the tower. Then they constantly toy with and experiment with different heights and designs (the tower sometimes collapse). They collaborate and share ideas as they build. When the tower collapses they reflect and rebuild it based on the new information they just discovered. Finally, based on these experiences, they imagine even more ideas to improve their new creation.
 
 ![Creating Learning Spiral - Mitchel Resnik](lcl.png "Creating Learning Spiral - Mitchel Resnik")
 
@@ -30,7 +30,7 @@ Unfortunately, in Kenya (and many countries globally) the  education system is i
 
 For educators and parents, some tools for children---developed by Resnik's lab---I recommend you try out and that I have been using with my children are: [Scratch](https://scratch.mit.edu) and [OctoStudio](https://octostudio.org). 
 
-For companies and business leaders, the kindergarten-style approach to learning is akin to agility. Adopting agile frameworks like SCRUM founded on strong principles that encourage experimentation, continuous improvement and delivery, collaboration and adaptation will lead to creative thinkers and innovators in your teams.
+For companies and business leaders, the kindergarten-style approach to learning is akin to agility. Adopting agile frameworks like SCRUM founded on strong principles that encourage experimentation, continuous improvement and delivery, collaboration and adaptation will inspire creative thinkers and innovators in your teams.
 
 ### Additional Reading & References
 1. [Lifelong Kindergarten](https://mitpress.mit.edu/9780262536134/lifelong-kindergarten/)

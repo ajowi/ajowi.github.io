@@ -1,6 +1,6 @@
 ---
-title: "AI for Public Health - Integrating qure.ai in Kenya's Public Hospitals"
-subtitle: "Adoption of AI in the healthcare industry has rapidly grown in the past decade bringing with it efficiency in patient management - by enabling faster diagnosis and reducing the workload of medical providers. AI is supporting helthcare workers, not replacing them. "
+title: "AI for Public Health - Implementing qure.ai in Kenya's Health Facilities"
+subtitle: "Adoption of AI in the healthcare industry has rapidly grown in the past decade bringing with it efficiency in patient management - enabling faster diagnosis and reducing the workload. AI is supporting helthcare workers, not replacing them. "
 author: "David Ajowi"
 date: "2024-07-31"
 categories: [artificial intelligence, health, medical ai]
@@ -10,60 +10,65 @@ draft: true
 
 ![Me - training healthworkers](thumbnail.jpeg "Me - training healthworkers")
 
-In June 2024, on a sunny Monday afternoon I received a phone call from a former colleage and a friend (NK - not his real name)  of many years. I had just taken lunch and was having a routine 15-minutes walk before heading back to my office. After catching up on life and family our conversation immediately shifted to a project NK was working on - The National Leprocy & Tuberculosis Program (NLTP) of Kenya was implementing a funded project to integrate medical AI software in 63 public health facilities across the 47 counties of Kenya. The $1.2 million project was being funded by Global Fund through Amref Health Africa to improve treatment of tuberculosis(TB) and lung diseases. Auxica Africa,  a local partner for Qure.ai in Kenya was leading the technical implementation
+In June 2024, on a sunny Monday afternoon I received a phone call from a former colleage and a friend (I'll call him KN - not his real name)  of many years. I had just taken lunch and was having a routine 15-minutes walk before heading back to my office. All caught up! Our conversation shifted to a project KN was working on. The National Leprocy & Tuberculosis Program (NLTP) of Kenya was implementing a funded project to integrate a medical AI software--`qTrack`---in 63 public health facilities across the 47 counties of Kenya. The $1.2 million project was funded by Global Fund through Amref Health Africa to improve treatment of tuberculosis(TB) and lung diseases. [Auxica Africa](https://auxicaafrica.co.ke),  a local partner for qure.ai in Kenya was leading the technical implementation
 
-"I need help!", he posed. "With what, my friend?", I asked back. At this moment I stopped walking and stood beside a shadowy jacaranda tree along the walkway.
+"I need help!", he posed. "With what, my friend?", I asked back. KN was leading the integration and was cutting his time to the project due to other commitments.
 
-"We have integrated 15 sites. We need a technical lead for the remaining sites.", he continued. NK was leading the integration and was cutting his time to the project due to other commitments. Well, we discussed the project a bit and when he asked if I could step in to support - I said, Yes!
+"We have integrated 15 sites. We need a technical lead for the remaining sites.", he continued. Well, we discussed the project in detail and I eventually agreed could step in to support.
 
-I had memorable experience leading the integration of `qTrack` (a medical AI appplication) in Kenya's public health facilities. AI's impact to our public healthcare system is abound with many benefits and opportunities. There are also lingering concerns on the preparedness of our public health facilities to embrace this revolutional technology - especially their IT infrastructure.
+I had memorable experiences leading the implementation of `qTrack` in Kenya's public health facilities. AI's impact to our public healthcare system is abound with many benefits and opportunities. There are also lingering concerns on the preparedness of our public health facilities to embrace this revolutional technology: especially the IT infrastructure and sustainability.
 
-## Integrating qure.ai - qTrack
+## Integrating qTrack
 
-qTrack is an AI application developed by Qure.ai - a leading health tech company that uses deep learning and AI tools to make healthcare more accessible and affordable to patients worldwide. This is the application procured by the project for deployment in the public health facilities mapped to benefit from the project. Qure.ai says its solutions have successfully analyzed 1+ billion images, making it stand out as the most widely employed AI in healthcare. 
+qTrack is an AI application developed by qure.ai - a leading health tech company that uses deep learning and AI tools to make healthcare more accessible and affordable to patients worldwide. This is the application procured by the project for deployment in the public health facilities mapped to benefit from the project. Qure.ai's website states that its solutions have successfully analyzed 1+ billion images, making it stand out as the most widely employed AI in healthcare. 
 
-Hardware procured as part of the project is a Dell G5 gaming laptop (32GB GDDR6 RAM, 2TB storage, NVIDIA® GeForce® GTX 1660Ti) to host the application, acting as a server. Each site getting a laptop. 
+To host the application, the project procured a Dell G5 gaming laptop (32GB GDDR6 RAM, 2TB storage, NVIDIA® GeForce® GTX 1660Ti), acting as a server. Each site getting one each. The hardware arrived fully setup with requisite software applications and qTrack pre-configured for each site.
 
-qTrack was pre-configured and setup in all the laptops.
+**How does the AI system work?**
 
-**How does it work?**
+![qTrack Flow - Courtesy qure.ai](qtrack.png "qTrack Flow")
 
-![qTrack Flow - Courtesy Qure.ai](qtrack.png "qTrack Flow")
+**DICOM** refers to Digital Imaging and Communications in Medicine - a standard format for transmitting and storing medical images, such as X-rays, MRIs, and CT scans.
 
-DICOM refers to Digital Imaging and Communications in Medicine - a standard format for transmitting and storing medical images, such as X-rays, MRIs, and CT scans.
-
-A screening routine for a patient (presenting TB-related symptoms) flows: patient data is captured captured before a scan is taken; X-Ray is taken; Images are pushed to qTrack for processing; Report generated with AI findings; Continue clinical process.
+A typical radiology screening routine for a patient (presenting TB-related symptoms) is as follows: patient data is captured captured before a scan is taken; X-Ray scan is taken; DICOM images are pushed to qTrack for processing; a report is generated with AI findings; clinical process continues.
 
 **Site requirements**
 
-- Functional digital medical imaging equipment (Modality)
-- Hospital Patient Management System (HMIS)
+Each health facility should at least have the following:
+
+- Functional digital medical imaging equipment (Modality, X-ray machine)
+- Hospital Patient Management System (HMIS): a medical records management system
 - Local Area Network (LAN)
 - Internet connection
 
-**Integration workflow at a site**
+**Typical integration workflow**
 
-- Initial site scoping - Check level of infrastructure readiness, Hospital Information System, internet, LAN, vLANs, IT team, Modality (medical equipment that processes X-Ray images)
-- Configure Modality and add Qure laptop (server) as a destination
-- Install Qure system 
-- Testing
-- User Training
+At each site the following must happen:
+
+- Perform initial site scoping - Check level of infrastructure readiness, Hospital Information System setup , network connectivity ( LAN, vLANs) IT organization, radiology setup (equipment and connectivity)
+- Configure Modality and add AI server as a destination for scans
+- Install AI system 
+- Test the system (Does the system receive and process images? Is AI report generated? Can users can access system?)
+- Training users on the system
 - Facility-wide integration
 - Handover
 - Site closure
 
-AI is supporting helthcare workers, not replacing them. Adoption of AI in the helthcare industry has rapidly grown in the past decade bringing with it efficiencies in patient management - by enabling faster diagnosis and reducing the workload of medical providers.
+Adoption of AI in the helthcare industry has rapidly grown in the past decade bringing with it efficiencies in patient management - enabling faster diagnosis and reducing the workload. AI is supporting helthcare workers, not replacing them. The introduction and use of AI for screening in publc health facilities is going to tremendously improve active case-finding for TB and accurately detect chest abnomalties early.
 
-As we left a site medical officers were enthusing over the AI system we had just deployed and trained them on - an indication that they have embraced the technology.
+Kenya has a shortage of radiologists. It is common to hear of counties having only one or no radiologist at all. Previously, x-ray scans/films would pile up for an overwhelmed radiologist---if they happen to be available---to intepret.
+With the new AI system, healthcare workers get an AI-generated report within seconds. Pilot studies have shown that the AI correctly diagnoses pulmonary TB with a sensitivity of 95% and specificity of 100%.  The introduction of AI will shorten patient waiting times, lead to quick diagnosis and instant patient treatment, help hospitals save on costs associated with unnecesary molecular tests and improve efficiency. This ultimately improves patient management.
 
-Kenya has a shortage of radiologists - it is unbelievable to hear of counties having only one radiologist, or none at all. The AI system, within seconds, can process x-ray images and generate a report with accurate findings - pilot studies have shown that AI correctly diagnoses pulmonary TB with a sensitivity of 95% and specificity of 100%. Previously, x-ray scans/films would pile and be queued for an overwhelmed radiologist (if they happen to be available) to intepret. The introduction of AI will shorten patient waiting times, lead to quick diagnosis and instat patient treatment, help hospitals save on costs associated with otherwise unnecesary molecular tests and improve efficiency - ultimately improving patient management.
+As we left a site, medical officers enthused over the AI system - an positive indication that they are ready to embraced the technology.
 
-**Lingering Concerns**
+## Lingering Concerns
 
-Major public hospitals in the counties are either Level 5-category Country Referral Hospitals or Level 4-category Sub-County Hospitals. The IT infrastructure in most of these facilities is wanting - from poorly designed networks to ill-equiped data centres server rooms. With the ever present demand for primary healthcare. The governments, both national and county, must prioritize robust hospital IT infrastructure if they are to benefit from technologies like AI which is here with us and promising to make healthcare affordable and quality.
-The current state where most hospital IT equipment is donated by project 
-- Poor internet connectivity
+Major public hospitals in the counties are either Level 5 Country Referral Hospitals or Level 4 Sub-County Hospitals.
 
-- There is lack of internal capacity to manage/fix breakdown of key installations like x-ray equipment leading to 
+- The IT infrastructure in most of these facilities is dire - from poorly designed networks to ill-equiped data centres/server rooms. 
+- Most hospital IT equipment is donated by projects. When these projects end there is no continuity and equipment gets neglected as new projects bring in their own. This is unsustainable.
+- The is no inter-connectivity between facilities making patient data sharing a dream
+- In most cases, there is lack of internal capacity to manage/fix breakdown of key installations like radiology equipment leading to longer delays because a vendor must be engaged. This negatively affect patient care.
+- We have weak policies on patient data management - storage, security, privacy and governance. These should be should also be addresses
 
-- Weak policies on patient data management - storage, security, privacy and governance should also be addresses
+With the ever present demand for primary healthcare. Governments, both national and county, must prioritize robust hospital IT infrastructure if we are to benefit from technology advancements. AI is here with us and promising to make healthcare affordable and quality.
