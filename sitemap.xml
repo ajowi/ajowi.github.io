@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://davidajowi.com/posts/installing-fastai-on-macos/index.html</loc>
-    <lastmod>2024-10-19T01:24:38.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://davidajowi.com/posts/creative-learning/index.html</loc>
-    <lastmod>2024-10-19T01:24:38.071Z</lastmod>
-  </url>
-  <url>
     <loc>https://davidajowi.com/about.html</loc>
-    <lastmod>2024-10-19T01:24:38.067Z</lastmod>
-  </url>
-  <url>
-    <loc>https://davidajowi.com/index.html</loc>
-    <lastmod>2024-10-19T01:24:38.067Z</lastmod>
+    <lastmod>2025-12-06T18:36:21.148Z</lastmod>
   </url>
   <url>
     <loc>https://davidajowi.com/posts/agile-mindset/index.html</loc>
-    <lastmod>2024-10-19T01:24:38.067Z</lastmod>
+    <lastmod>2025-12-06T18:36:21.149Z</lastmod>
+  </url>
+  <url>
+    <loc>https://davidajowi.com/posts/creative-learning/index.html</loc>
+    <lastmod>2025-12-06T18:36:21.152Z</lastmod>
+  </url>
+  <url>
+    <loc>https://davidajowi.com/index.html</loc>
+    <lastmod>2025-12-06T18:36:21.149Z</lastmod>
   </url>
   <url>
     <loc>https://davidajowi.com/posts/high-performing-teams/index.html</loc>
-    <lastmod>2024-10-19T01:24:38.079Z</lastmod>
+    <lastmod>2025-12-06T18:36:21.160Z</lastmod>
+  </url>
+  <url>
+    <loc>https://davidajowi.com/posts/installing-fastai-on-macos/index.html</loc>
+    <lastmod>2025-12-06T18:36:21.160Z</lastmod>
   </url>
 </urlset>
