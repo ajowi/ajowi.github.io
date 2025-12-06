@@ -1,5 +1,5 @@
 ---
-title: "AI for Public Health - Implementing qure.ai in Kenya's Health Facilities"
+title: "AI for Public Health - How We Integrated AI in 63 Public Health Facilities"
 subtitle: "Adoption of AI in the healthcare industry has rapidly grown in the past decade bringing with it efficiency in patient management - enabling faster diagnosis and reducing the workload. AI is supporting helthcare workers, not replacing them. "
 author: "David Ajowi"
 date: "2024-07-31"
@@ -16,13 +16,13 @@ In June 2024, on a sunny Monday afternoon I received a phone call from a former 
 
 "We have integrated 15 sites. We need a technical lead for the remaining sites.", he continued. Well, we discussed the project in detail and I eventually agreed could step in to support.
 
-I had memorable experiences leading the implementation of `qTrack` in Kenya's public health facilities. AI's impact to our public healthcare system is abound with many benefits and opportunities. There are also lingering concerns on the preparedness of our public health facilities to embrace this revolutional technology: especially the IT infrastructure and sustainability.
+I had a memorable experience leading the implementation of `qTrack` in Kenya. AI's impact to our public healthcare system is abound with many benefits and opportunities. There are also lingering concerns on the preparedness of our public health facilities to embrace this revolutional technology: especially the IT infrastructure and sustainability.
 
 ## Integrating qTrack
 
 qTrack is an AI application developed by qure.ai - a leading health tech company that uses deep learning and AI tools to make healthcare more accessible and affordable to patients worldwide. This is the application procured by the project for deployment in the public health facilities mapped to benefit from the project. Qure.ai's website states that its solutions have successfully analyzed 1+ billion images, making it stand out as the most widely employed AI in healthcare. 
 
-To host the application, the project procured a Dell G5 gaming laptop (32GB GDDR6 RAM, 2TB storage, NVIDIA® GeForce® GTX 1660Ti), acting as a server. Each site getting one each. The hardware arrived fully setup with requisite software applications and qTrack pre-configured for each site.
+The project procured a Dell G5 gaming laptop (32GB GDDR6 RAM, 2TB storage, NVIDIA® GeForce® GTX 1660Ti), to host the application and act as a server. Each site getting one each. The hardware arrived fully setup with requisite software applications and qTrack pre-configured for each site.
 
 **How does the AI system work?**
 
@@ -30,7 +30,7 @@ To host the application, the project procured a Dell G5 gaming laptop (32GB GDDR
 
 **DICOM** refers to Digital Imaging and Communications in Medicine - a standard format for transmitting and storing medical images, such as X-rays, MRIs, and CT scans.
 
-A typical radiology screening routine for a patient (presenting TB-related symptoms) is as follows: patient data is captured captured before a scan is taken; X-Ray scan is taken; DICOM images are pushed to qTrack for processing; a report is generated with AI findings; clinical process continues.
+A typical radiology screening routine for a patient (presenting Chest/TB-related symptoms) is as follows: patient data is captured captured before a scan is taken; X-Ray scan is taken; DICOM images are pushed to qTrack for processing; a report is generated with AI findings; clinical process continues.
 
 **Site requirements**
 
@@ -53,6 +53,8 @@ At each site the following must happen:
 - Facility-wide integration
 - Handover
 - Site closure
+
+## Benefits of the AI System
 
 Adoption of AI in the helthcare industry has rapidly grown in the past decade bringing with it efficiencies in patient management - enabling faster diagnosis and reducing the workload. AI is supporting helthcare workers, not replacing them. The introduction and use of AI for screening in publc health facilities is going to tremendously improve active case-finding for TB and accurately detect chest abnomalties early.
 
