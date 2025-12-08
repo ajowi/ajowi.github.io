@@ -1,6 +1,6 @@
 ---
 title: "David Ajowi"
-subtitle: "Welcome! this David Ajowi's personal weblog. I write about my own personal experiences, learnings and thoughts - on work and life."
+subtitle: "Welcome! this is David Ajowi's personal weblog. I write about my own personal experiences, learnings and thoughts - on work and life."
 listing:
   contents: posts
   sort: "date desc"
