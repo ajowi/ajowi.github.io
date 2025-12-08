@@ -18,6 +18,6 @@ about:
 
 Welcome! I am David Ajowi: a computer programmer currently based in Oyugis, Kenya. 
 
-Since 2019, I develop software, teach software development, and support teams to maximize business value by adopting agile practises. I have had the privilege of leading diverse technical teams, overseeing successful product launches, building enterprise IT infrastructure, and providing IT leadership for global enterprises.
+Since 2009, I develop software, teach software development, and support teams to maximize business value by adopting agile practises. I have had the privilege of leading diverse technical teams, overseeing successful product launches, building enterprise IT infrastructure, and providing IT leadership for global enterprises.
 
 I write about my own personal experiences, learnings and thoughts - on work and life. Luckily, you find and take away something useful in my sharing.
