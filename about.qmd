@@ -7,16 +7,16 @@ about:
     - icon: twitter-x
       text: Twitter
       href: https://x.com/daaj
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/davidajowi
     - icon: github
       text: Github
       href: https://github.com/ajowi
-
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/davidajowi
+    
 ---
 
-Welcome! I am David Ajowi: a computer programmer currently based in Oyugis, Kenya. 
+Welcome! I am David Ajowi: a computer programmer currently based in Nairobi, Kenya. 
 
 Since 2009, I develop software, teach software development, and support teams to maximize business value by adopting agile practises. I have had the privilege of leading diverse technical teams, overseeing successful product launches, building enterprise IT infrastructure, and providing IT leadership for global enterprises.
 
