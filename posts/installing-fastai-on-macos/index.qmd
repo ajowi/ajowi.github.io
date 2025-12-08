@@ -38,19 +38,19 @@ Beginning version 4.3.0, Docker removed the hard requirement to install Rosetta 
 % sudo hdiutil detach /Volumes/Docker
 ```
 
-Next, grabbed the latest ubuntu image from Docker Hub.
+Next, I pulled the latest ubuntu image from Docker Hub.
 
 ```zsh
 % docker pull ubuntu
 ```
 
-Created and launched a new container in interactive mode. 
+Created and launched a new container in interactive mode, activating shell access to the container. 
 
 ```zsh
 % sudo docker run -it —name fastai-deep-learning ubuntu /bin/bash
 ```
 
-I now have access to an interactive shell inside the container. Rest of the commands in this and the next [section](##install-fastai) are executed inside the container.
+The rest of the commands in this and the next [Installing `fastai`](##install-fastai) are executed inside the container.
 
 Update `apt` and install necessary utility packages
 
@@ -68,7 +68,7 @@ The ubuntu ARM64 (M1) base image downloaded and used above (unless a different -
 
 ## Installing `fastai`
 
-Following the fastai docs, I downloaded and installed `miniconda`.
+I first setup `miniconda`. See the fastai docs.
 
 ```zsh
 % mkdir -p ~/miniconda3
@@ -77,27 +77,27 @@ Following the fastai docs, I downloaded and installed `miniconda`.
 % rm -rf ~/miniconda3/miniconda.sh
 ```
 
-Install `pip`.
+Then installed `pip`.
 
 ```zsh
 % sudo apt install python3-pip
 ```
 
-Install `pytorch`.
+Followed by `pytorch`.
 
 ```zsh
 % conda install pytorch torchvision torchaudio cpuonly -c pytorch
 ```
 
-Finally, install fastai.
+And, finally fastai.
 
 ```zsh
 % conda install -c fastai fastai
 ```
 
-## Create a new docker image
+## Creating a new docker image
 
-`docker ps -a` lists all containers. I located my container (*fastai-deep-learning* created [above](##Setting-Up-A-Docker-Container)) and copied the container ID. Saved the container's configuration and setup to a new image *fastai-dl* using docker's `container commit`. I finally confirmed my newly created image exists using `docker images`. 
+I used `docker ps -a` to list all containers. I located my container (*fastai-deep-learning* created [above](##Setting-Up-A-Docker-Container)) and copied the container ID. Saved the container's configuration and setup to a new image *fastai-dl* using docker's `container commit`. I finally confirmed my newly created image exists using `docker images`. 
 
 *fastai-dl* image can now be used to create a new ready-to-use container for fastai development on MacOS.
 
@@ -111,7 +111,7 @@ Finally, install fastai.
 
 >JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.
 
-I use Jupyter notebooks for most of my deep learning development work. My local project notebooks should be accessible inside the docker enviroment and loaded by Jupyter. 
+I use Jupyter notebooks for most of my deep learning development work. The goal is to make my local notebooks accessible inside the docker enviroment and loaded by Jupyter. 
 
 To achieve this, I launched a new docker container (with an interactive shell) attaching my local project folder as a volume using `-v ~/Dev/deep-learning:/data` (local folder `~/Dev/deep-learning` syncs to `/data` folder in the container). I mapped ports using `-p 8889:8888` (local port `8889` maps to the container's jupyter instance running on port `8888`).
 
@@ -125,7 +125,7 @@ Once inside the container I launched jupyter using the following command:
 % jupyter notebook --ip 0.0.0.0 --no-browser
 ```
 
-Voila! I could access jupyter locally at `https://localhost:8889`.
+I could now access jupyter locally at `https://localhost:8889`.
 
 
 ![](jupyter.png)
